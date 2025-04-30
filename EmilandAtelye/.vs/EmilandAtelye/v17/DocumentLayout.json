@@ -1,0 +1,888 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\viewmodels\\addorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\viewmodels\\addorderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\viewmodels\\changesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\viewmodels\\changesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\emilandatelye.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:emilandatelye.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\AppData\\Local\\SourceServer\\cfbcad50f90507734ac095c9d75a52d733a17ebeef9c47fc545960f1e02e6b59\\src\\libraries\\System.Private.CoreLib\\src\\Microsoft\\Win32\\SafeHandles\\SafeFileHandle.Windows.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\concretes\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\concretes\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\concretes\\cardsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\concretes\\cardsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\concretes\\basesqlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\concretes\\basesqlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\orderviews\\addorderview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\orderviews\\addorderview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\services\\concrete\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:services\\concrete\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\msbookview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\msbookview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\constants\\passkeyconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:constants\\passkeyconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\concretes\\cashboxrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\concretes\\cashboxrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\services\\concrete\\currencytypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:services\\concrete\\currencytypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\constants\\viewtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:constants\\viewtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\expenses\\expensesmiview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\expenses\\expensesmiview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\cashboxs\\cashboxview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\cashboxs\\cashboxview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\cashboxs\\cashboxmiview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\cashboxs\\cashboxmiview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\viewmodels\\msbookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\viewmodels\\msbookviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\concretes\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\concretes\\stockrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\viewmodels\\stockviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\viewmodels\\stockviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\viewmodels\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\logger\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:logger\\filelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\orderviews\\orderhc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\orderviews\\orderhc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\orderviews\\ordermi.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\orderviews\\ordermi.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\orderviews\\ordermk.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\orderviews\\ordermk.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\orderviews\\ordern.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\orderviews\\ordern.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\orderviews\\ordert.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\orderviews\\ordert.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\orderviews\\orderf.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\orderviews\\orderf.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\orderviews\\addorderview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\orderviews\\addorderview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\ironings\\ironingdailyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\ironings\\ironingdailyview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\ironings\\ironing2view.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\ironings\\ironing2view.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\views\\ironings\\ironing1view.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\views\\ironings\\ironing1view.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\concretes\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\concretes\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\concretes\\goodsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\concretes\\goodsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\models\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\concretes\\modelphotorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\concretes\\modelphotorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\concretes\\colorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\concretes\\colorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\concretes\\companyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\concretes\\companyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\converters\\ingredientstostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:converters\\ingredientstostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\converters\\groupgen2sampleidtostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:converters\\groupgen2sampleidtostringconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\converters\\expensebackgroundconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:converters\\expensebackgroundconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\constants\\readpermissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:constants\\readpermissions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:commands\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\application files\\textfiletransformation_1_0_0_0\\textfiletransformation.exe.config.deploy||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:application files\\textfiletransformation_1_0_0_0\\textfiletransformation.exe.config.deploy||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\application files\\textfiletransformation_1_0_0_0\\textfiletransformation.application||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:application files\\textfiletransformation_1_0_0_0\\textfiletransformation.application||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dataaccess\\abstracts\\icardsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dataaccess\\abstracts\\icardsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\domain\\viewmodels\\ironingdailyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:domain\\viewmodels\\ironingdailyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dtos\\requests\\addupdatefinancerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dtos\\requests\\addupdatefinancerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dtos\\price2dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dtos\\price2dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\dtos\\sizebygroupgen2dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:dtos\\sizebygroupgen2dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|c:\\users\\dell\\desktop\\emiland\\emilandatelye\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{302CE704-D354-435E-A9CF-35A0BCED02AB}|EmilandAtelye.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChangesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\ChangesViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ViewModels\\ChangesViewModel.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\ChangesViewModel.cs",
+              "RelativeToolTip": "Domain\\ViewModels\\ChangesViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T14:00:03.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddOrderView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\AddOrderView.xaml.cs",
+              "RelativeDocumentMoniker": "Domain\\Views\\OrderViews\\AddOrderView.xaml.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\AddOrderView.xaml.cs",
+              "RelativeToolTip": "Domain\\Views\\OrderViews\\AddOrderView.xaml.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAAwF0AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T09:30:57.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SafeFileHandle.Windows.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\AppData\\Local\\SourceServer\\cfbcad50f90507734ac095c9d75a52d733a17ebeef9c47fc545960f1e02e6b59\\src\\libraries\\System.Private.CoreLib\\src\\Microsoft\\Win32\\SafeHandles\\SafeFileHandle.Windows.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\SourceServer\\cfbcad50f90507734ac095c9d75a52d733a17ebeef9c47fc545960f1e02e6b59\\src\\libraries\\System.Private.CoreLib\\src\\Microsoft\\Win32\\SafeHandles\\SafeFileHandle.Windows.cs",
+              "ToolTip": "C:\\Users\\DELL\\AppData\\Local\\SourceServer\\cfbcad50f90507734ac095c9d75a52d733a17ebeef9c47fc545960f1e02e6b59\\src\\libraries\\System.Private.CoreLib\\src\\Microsoft\\Win32\\SafeHandles\\SafeFileHandle.Windows.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\SourceServer\\cfbcad50f90507734ac095c9d75a52d733a17ebeef9c47fc545960f1e02e6b59\\src\\libraries\\System.Private.CoreLib\\src\\Microsoft\\Win32\\SafeHandles\\SafeFileHandle.Windows.cs [Read Only]",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAAAHEAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T12:58:55.788Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CashBoxRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\CashBoxRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concretes\\CashBoxRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\CashBoxRepository.cs",
+              "RelativeToolTip": "DataAccess\\Concretes\\CashBoxRepository.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAAEoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:29:17.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concretes\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\UnitOfWork.cs",
+              "RelativeToolTip": "DataAccess\\Concretes\\UnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwDoAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:32:08.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddOrderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\AddOrderViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ViewModels\\AddOrderViewModel.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\AddOrderViewModel.cs",
+              "RelativeToolTip": "Domain\\ViewModels\\AddOrderViewModel.cs",
+              "ViewState": "AQIAAP8AAAAAAAAAAAAIwBABAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:35:03.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\LoginView.xaml.cs",
+              "RelativeDocumentMoniker": "Domain\\Views\\LoginView.xaml.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\LoginView.xaml.cs",
+              "RelativeToolTip": "Domain\\Views\\LoginView.xaml.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAcwDQAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:49:33.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseSqlRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\BaseSqlRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concretes\\BaseSqlRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\BaseSqlRepository.cs",
+              "RelativeToolTip": "DataAccess\\Concretes\\BaseSqlRepository.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAwB0AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:26:48.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmilandAtelye",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\EmilandAtelye.csproj",
+              "RelativeDocumentMoniker": "EmilandAtelye.csproj",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\EmilandAtelye.csproj",
+              "RelativeToolTip": "EmilandAtelye.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-29T12:24:32.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CurrencyTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Services\\Concrete\\CurrencyTypeService.cs",
+              "RelativeDocumentMoniker": "Services\\Concrete\\CurrencyTypeService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Services\\Concrete\\CurrencyTypeService.cs",
+              "RelativeToolTip": "Services\\Concrete\\CurrencyTypeService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T19:04:32.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Services\\Concrete\\FileService.cs",
+              "RelativeDocumentMoniker": "Services\\Concrete\\FileService.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Services\\Concrete\\FileService.cs",
+              "RelativeToolTip": "Services\\Concrete\\FileService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:42:08.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CardsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\CardsRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concretes\\CardsRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\CardsRepository.cs",
+              "RelativeToolTip": "DataAccess\\Concretes\\CardsRepository.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAAC8AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:28:25.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PassKeyConstants.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Constants\\PassKeyConstants.cs",
+              "RelativeDocumentMoniker": "Constants\\PassKeyConstants.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Constants\\PassKeyConstants.cs",
+              "RelativeToolTip": "Constants\\PassKeyConstants.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAAAGEAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:23:28.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CashboxMIView.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Cashboxs\\CashboxMIView.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\Cashboxs\\CashboxMIView.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Cashboxs\\CashboxMIView.xaml",
+              "RelativeToolTip": "Domain\\Views\\Cashboxs\\CashboxMIView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T19:01:47.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CashboxView.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Cashboxs\\CashboxView.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\Cashboxs\\CashboxView.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Cashboxs\\CashboxView.xaml",
+              "RelativeToolTip": "Domain\\Views\\Cashboxs\\CashboxView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T19:01:52.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MSBookView.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\MSBookView.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\MSBookView.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\MSBookView.xaml",
+              "RelativeToolTip": "Domain\\Views\\MSBookView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-29T09:24:40.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ExpensesMIView.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Expenses\\ExpensesMIView.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\Expenses\\ExpensesMIView.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Expenses\\ExpensesMIView.xaml",
+              "RelativeToolTip": "Domain\\Views\\Expenses\\ExpensesMIView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T19:01:56.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MSBookViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\MSBookViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ViewModels\\MSBookViewModel.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\MSBookViewModel.cs",
+              "RelativeToolTip": "Domain\\ViewModels\\MSBookViewModel.cs",
+              "ViewState": "AQIAAAEBAAAAAAAAAAAqwC0AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T19:00:05.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ViewTag.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Constants\\ViewTag.cs",
+              "RelativeDocumentMoniker": "Constants\\ViewTag.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Constants\\ViewTag.cs",
+              "RelativeToolTip": "Constants\\ViewTag.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:24:13.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "StockRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\StockRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concretes\\StockRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\StockRepository.cs",
+              "RelativeToolTip": "DataAccess\\Concretes\\StockRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:58:31.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "StockViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\StockViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ViewModels\\StockViewModel.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\StockViewModel.cs",
+              "RelativeToolTip": "Domain\\ViewModels\\StockViewModel.cs",
+              "ViewState": "AQIAAGEBAAAAAAAAAAAuwGYBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:55:46.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "Domain\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAgwGMAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:50:10.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrderHC.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderHC.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\OrderViews\\OrderHC.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderHC.xaml",
+              "RelativeToolTip": "Domain\\Views\\OrderViews\\OrderHC.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:45:49.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FileLogger.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Logger\\FileLogger.cs",
+              "RelativeDocumentMoniker": "Logger\\FileLogger.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Logger\\FileLogger.cs",
+              "RelativeToolTip": "Logger\\FileLogger.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T16:58:02.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "OrderF.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderF.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\OrderViews\\OrderF.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderF.xaml",
+              "RelativeToolTip": "Domain\\Views\\OrderViews\\OrderF.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:45:51.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ViewModels\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\BaseViewModel.cs",
+              "RelativeToolTip": "Domain\\ViewModels\\BaseViewModel.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:35:14.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "OrderT.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderT.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\OrderViews\\OrderT.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderT.xaml",
+              "RelativeToolTip": "Domain\\Views\\OrderViews\\OrderT.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:45:55.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "OrderN.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderN.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\OrderViews\\OrderN.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderN.xaml",
+              "RelativeToolTip": "Domain\\Views\\OrderViews\\OrderN.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:45:57.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "OrderMK.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderMK.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\OrderViews\\OrderMK.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderMK.xaml",
+              "RelativeToolTip": "Domain\\Views\\OrderViews\\OrderMK.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:45:59.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "OrderMI.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderMI.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\OrderViews\\OrderMI.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\OrderMI.xaml",
+              "RelativeToolTip": "Domain\\Views\\OrderViews\\OrderMI.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:46:02.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "Domain\\Views\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:46:08.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AddOrderView.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\AddOrderView.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\OrderViews\\AddOrderView.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\OrderViews\\AddOrderView.xaml",
+              "RelativeToolTip": "Domain\\Views\\OrderViews\\AddOrderView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:45:46.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IroningDailyView.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Ironings\\IroningDailyView.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\Ironings\\IroningDailyView.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Ironings\\IroningDailyView.xaml",
+              "RelativeToolTip": "Domain\\Views\\Ironings\\IroningDailyView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:45:41.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Ironing2View.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Ironings\\Ironing2View.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\Ironings\\Ironing2View.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Ironings\\Ironing2View.xaml",
+              "RelativeToolTip": "Domain\\Views\\Ironings\\Ironing2View.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:45:39.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Ironing1View.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Ironings\\Ironing1View.xaml",
+              "RelativeDocumentMoniker": "Domain\\Views\\Ironings\\Ironing1View.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Views\\Ironings\\Ironing1View.xaml",
+              "RelativeToolTip": "Domain\\Views\\Ironings\\Ironing1View.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T18:45:11.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "GoodsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\GoodsRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concretes\\GoodsRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\GoodsRepository.cs",
+              "RelativeToolTip": "DataAccess\\Concretes\\GoodsRepository.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:39:20.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ModelPhotoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\ModelPhotoRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concretes\\ModelPhotoRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\ModelPhotoRepository.cs",
+              "RelativeToolTip": "DataAccess\\Concretes\\ModelPhotoRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:33:23.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\UserRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concretes\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\UserRepository.cs",
+              "RelativeToolTip": "DataAccess\\Concretes\\UserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:30:56.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ColorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\ColorRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concretes\\ColorRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\ColorRepository.cs",
+              "RelativeToolTip": "DataAccess\\Concretes\\ColorRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:30:54.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Models\\Card.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Card.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\Models\\Card.cs",
+              "RelativeToolTip": "Domain\\Models\\Card.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T16:59:05.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "CompanyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\CompanyRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concretes\\CompanyRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Concretes\\CompanyRepository.cs",
+              "RelativeToolTip": "DataAccess\\Concretes\\CompanyRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:30:53.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IngredientsToStringConverter.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Converters\\IngredientsToStringConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\IngredientsToStringConverter.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Converters\\IngredientsToStringConverter.cs",
+              "RelativeToolTip": "Converters\\IngredientsToStringConverter.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwBMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:26:12.365Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "GroupGen2SampleIdToStringConverter.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Converters\\GroupGen2SampleIdToStringConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\GroupGen2SampleIdToStringConverter.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Converters\\GroupGen2SampleIdToStringConverter.cs",
+              "RelativeToolTip": "Converters\\GroupGen2SampleIdToStringConverter.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBgAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:25:49.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ExpenseBackgroundConverter.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Converters\\ExpenseBackgroundConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\ExpenseBackgroundConverter.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Converters\\ExpenseBackgroundConverter.cs",
+              "RelativeToolTip": "Converters\\ExpenseBackgroundConverter.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:24:36.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ReadPermissions.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Constants\\ReadPermissions.cs",
+              "RelativeDocumentMoniker": "Constants\\ReadPermissions.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Constants\\ReadPermissions.cs",
+              "RelativeToolTip": "Constants\\ReadPermissions.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:23:46.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "TextFileTransformation.exe.config.deploy",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Application Files\\TextFileTransformation_1_0_0_0\\TextFileTransformation.exe.config.deploy",
+              "RelativeDocumentMoniker": "Application Files\\TextFileTransformation_1_0_0_0\\TextFileTransformation.exe.config.deploy",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Application Files\\TextFileTransformation_1_0_0_0\\TextFileTransformation.exe.config.deploy",
+              "RelativeToolTip": "Application Files\\TextFileTransformation_1_0_0_0\\TextFileTransformation.exe.config.deploy",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-28T18:21:42.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "TextFileTransformation.application",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Application Files\\TextFileTransformation_1_0_0_0\\TextFileTransformation.application",
+              "RelativeDocumentMoniker": "Application Files\\TextFileTransformation_1_0_0_0\\TextFileTransformation.application",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Application Files\\TextFileTransformation_1_0_0_0\\TextFileTransformation.application",
+              "RelativeToolTip": "Application Files\\TextFileTransformation_1_0_0_0\\TextFileTransformation.application",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMYSURBVDhPzZRNaFxVFMd/7828yUdrg2lNpMVmk9DqxmZTBeki4FIXgoIg4kIXuoh7t4IV/FiVbtwILrU7ERV0YYtItVBtSoWkhZqWZjL5cvIyM\u002B\u002B9ez5c3JlJLW4EF174w\u002BVw7v/87/\u002Bce\u002BG/XO6eLJ795rI7fn9cFUSdIFCpUQao1KkClP14EAgKosbW8lcX7l355COA5MPPWz42PuppWsPcMQcRJ4gj4pQCVXBKdargJIkzkin1eo87rVHuNnNu//zp\u002BdVL7y0CpAAJCUmSAAlqoAZiUCpUAqVAEaAMcGC0xtEjXSYmrjLzaJdjh42HRnV4u7SeBOr0yLxL5l0a3qPmBakVIAUmPULoIWWPsujRSCvqSZPl5gUaI1c5eTxnZqo2JKxPjTdZOD3Hw4fGh0EcHDDzqFjjPpjhJNxqNvjlbsmlpY9ZOPECRyfz4dHUTchqCSNZOkQjS8jqCY3\u002BvpElZI2Yk6VJrIhz\u002BtQ8q3vXyB\u002B788izb585CZCKCO77TXbvw8CGcFSjWjFDzAgaqB2ocejIGOOT2fzBmbHXz7zx1Gwq\u002Bs\u002BE5vS77qj7kNgMKhHyXs5au0k6kmJmc1v55svTz0y\u002Bkup9CiNZJFCzqKqvzAZ7dcqqYnO3xcbmBks3l7jZXGY735z6/uJ3b6aq\u002By13ByOqcAf1OEKmIA5i3odRFAWt9RbrrXXWWk022lsrUxPTL6aqGq9lRGUafRt0NyocKI15QZVCCrrdDtu725Sh\u002BmGkGH333pdbv6ZRmeMDn/rexcMDGNIni8WMIhT8udfm8alTnGg8ubK3VH2b3\u002Bp1Uuibb/sQswcII0xBzRExRITjh2dZmH2eOZ8vd37L2wyennlMVFVELR5QIwwgf4epM1Y/yDvPfcCxsSdYb20P\u002B1CHOHPt3Zx8r0vQ\u002BDFUCkGcMjiiTiWOaCyeyDSvPf0\u002BO9vj/HjlGjdW/hgSJuc\u002B\u002B9o3N9a909kjBIkeWvx11AZ2DLwdjJYStKCeNmiurbFy/fL51Rs/LQIkL7361rnrvy/T6XSGVf7tyneaF3eat794MP7/XH8B2xWEIx/3/kYAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-04-28T18:21:40.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Commands\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Commands\\RelayCommand.cs",
+              "RelativeToolTip": "Commands\\RelayCommand.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwCUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:21:37.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ICardsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Abstracts\\ICardsRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Abstracts\\ICardsRepository.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DataAccess\\Abstracts\\ICardsRepository.cs",
+              "RelativeToolTip": "DataAccess\\Abstracts\\ICardsRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T17:00:17.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "IroningDailyViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\IroningDailyViewModel.cs",
+              "RelativeDocumentMoniker": "Domain\\ViewModels\\IroningDailyViewModel.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\Domain\\ViewModels\\IroningDailyViewModel.cs",
+              "RelativeToolTip": "Domain\\ViewModels\\IroningDailyViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T16:59:29.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "AddUpdateFinanceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DTOs\\Requests\\AddUpdateFinanceRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Requests\\AddUpdateFinanceRequest.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DTOs\\Requests\\AddUpdateFinanceRequest.cs",
+              "RelativeToolTip": "DTOs\\Requests\\AddUpdateFinanceRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T16:58:34.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Price2DTO.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DTOs\\Price2DTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\Price2DTO.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DTOs\\Price2DTO.cs",
+              "RelativeToolTip": "DTOs\\Price2DTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T16:58:21.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "SizeByGroupGen2DTO.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DTOs\\SizeByGroupGen2DTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\SizeByGroupGen2DTO.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\DTOs\\SizeByGroupGen2DTO.cs",
+              "RelativeToolTip": "DTOs\\SizeByGroupGen2DTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T16:58:15.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\AssemblyInfo.cs",
+              "RelativeToolTip": "AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T16:54:21.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\DELL\\Desktop\\Emiland\\EmilandAtelye\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-28T16:54:07.621Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

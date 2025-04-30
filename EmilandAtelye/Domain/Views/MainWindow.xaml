@@ -1,0 +1,157 @@
+<Window x:Class="EmilandAtelye.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmilandAtelye"
+        MouseMove="Window_MouseMove" PreviewKeyDown="Window_PreviewKeyDown" KeyDown="Window_KeyDown"
+        Title="MainWindow" Height="450" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+  <DockPanel LastChildFill="True">
+    <StatusBar DockPanel.Dock="Bottom" Height="30">
+      <StatusBarItem>
+        <Grid x:Name="StatusBarGrid" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="1300">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="{Binding Username}"/>
+          <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="{Binding SelectedDepartment.DepartmentName}"/>
+          <TextBlock Grid.Column="2" Text="v 5.3.11.1208" HorizontalAlignment="Center"/>
+        </Grid>
+      </StatusBarItem>
+    </StatusBar>
+    <Menu DockPanel.Dock="Top">
+      <MenuItem Header="Fayl"/>
+      <MenuItem Header="Xidmətlər"/>
+      <MenuItem Header="Baxış sənədləri"/>
+      <MenuItem Header="Kömək"/>
+      <MenuItem Header="Pəncərələr"/>
+    </Menu>
+    <ToolBarTray DockPanel.Dock="Top" Background="White">
+      <ToolBar Background="White">
+        <Button x:Name="MsBook" Padding="5 0" Command="{Binding MsBookCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/ms_kitab_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="MS kitabı" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="Stock" Padding="5 0" Command="{Binding StockCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/anbar_qaligi_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Anbar qalığı" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="Measurement" Padding="5 0" Command="{Binding MeasurementCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/olculer_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Ölçülər" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="OrderT" Padding="5 0" Command="{Binding OrderTCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/sifarisler_t_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Sifarişlər T" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="OrderF" Padding="5 0" Command="{Binding OrderFCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/sifarisler_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Sifarişlər F" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="OrderN" Padding="5 0" Command="{Binding OrderNCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/sifarisler_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Sifarişlər N" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="OrderHC" Padding="5 0" Command="{Binding OrderHCCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/sifarisler_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Sifarişlər H.C." HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="OrderMI" Padding="5 0" Command="{Binding OrderMICommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/sifarisler_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Sifarişlər M.İ." HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="OrderMK" Padding="5 0" Command="{Binding OrderMKCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/sifarisler_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Sifarişlər M.K." HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="Changes" Padding="5 0" Command="{Binding ChangesCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/deyisiklikler_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Dəyişikliklər" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="Ironing1" Padding="5 0" Command="{Binding Ironing1Command, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/utuleme_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Ütüləmə" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="Ironing2" Padding="5 0" Command="{Binding Ironing2Command, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/utuleme_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Ütüləmə 2" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="IroningDaily" Padding="5 0" Command="{Binding IroningDailyCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/utu_gunluk_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Ütü günlük" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="Debts" Padding="5 0" Command="{Binding DebtsCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/borc_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Borclar" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="Handover" Padding="5 0" Command="{Binding HandoverCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/tehvil_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Təhvil" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="Cashbox" Padding="5 0" Command="{Binding CashboxCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/kassa_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Kassa" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="Expenses" Padding="5 0" Command="{Binding ExpensesCommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/xerc_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Xərc" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="CashboxMI" Padding="5 0" Command="{Binding CashboxMICommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/kassa_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Kassa Mİ" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button x:Name="ExpensesMI" Padding="5 0" Command="{Binding ExpenseMICommand, Mode=TwoWay}">
+          <StackPanel>
+            <Image Source="../Images/xerc_icon.png" Width="32" Height="32"/>
+            <TextBlock Text="Xərc Mİ" HorizontalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+      </ToolBar>
+    </ToolBarTray>
+    <Grid Background="Gray" DockPanel.Dock="Top">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="102*"/>
+        <ColumnDefinition Width="1219*"/>
+      </Grid.ColumnDefinitions>
+      <ContentControl Grid.ColumnSpan="2" Content="{Binding CurrentView}"/>
+    </Grid>
+  </DockPanel>
+</Window>

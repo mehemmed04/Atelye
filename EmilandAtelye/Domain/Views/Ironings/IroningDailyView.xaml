@@ -1,0 +1,229 @@
+<UserControl x:Class="EmilandAtelye.Domain.Views.Ironings.IroningDailyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:EmilandAtelye.Domain.Views.Ironings">
+  <Grid Background="White">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="10">
+      <TextBlock Text="Təhvil tarixi:" VerticalAlignment="Center" Margin="0,0,5,0" FontWeight="Bold"/>
+      <DatePicker Width="120" Margin="0,0,10,0" SelectedDate="{Binding SelectedDate}"/>
+      <Button Content="&lt;&lt;" Width="40" Margin="5,0" Command="{Binding PreviousDayCommand}"/>
+      <Button Content="&gt;&gt;" Width="40" Margin="5,0" Command="{Binding NextDayCommand}"/>
+    </StackPanel>
+    <DataGrid Grid.Row="1" AutoGenerateColumns="False" Margin="10" IsReadOnly="True"
+              VerticalScrollBarVisibility="Auto" ItemsSource="{Binding IroningDaily}">
+      <DataGrid.RowStyle>
+        <Style TargetType="{x:Type DataGridRow}">
+          <Style.Triggers>
+            <DataTrigger Binding="{Binding IroningDate.DayOfWeek}" Value="Sunday">
+              <Setter Property="Control.Background" Value="Red"/>
+              <Setter Property="Control.Foreground" Value="White"/>
+            </DataTrigger>
+          </Style.Triggers>
+        </Style>
+      </DataGrid.RowStyle>
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Tarix" Width="75" FontSize="13" FontWeight="SemiBold"
+                            Binding="{Binding IroningDate, StringFormat=d/M/yyyy}"/>
+        <DataGridTemplateColumn Width="310">
+          <DataGridColumn.Header>
+            <StackPanel>
+              <Label FontWeight="Bold" HorizontalAlignment="Center">
+                KOST, SMOK, PEN, PALTO, PLAŞ
+              </Label>
+              <StackPanel Orientation="Horizontal" Margin="0">
+                <Label Content="T.Ə. 86" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="Füz. 63" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="Niz. 77" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="H.C." Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="M.İ. 16" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="M.K." Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+              </StackPanel>
+            </StackPanel>
+          </DataGridColumn.Header>
+          <DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOST_12}"
+                           Background="{Binding BackgroundColor1}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOST_13}"
+                           Background="{Binding BackgroundColor2}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOST_14}"
+                           Background="{Binding BackgroundColor3}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOST_17}"
+                           Background="{Binding BackgroundColor4}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOST_16}"
+                           Background="{Binding BackgroundColor5}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOST_18}"
+                           Background="{Binding BackgroundColor6}"/>
+              </StackPanel>
+            </DataTemplate>
+          </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+        <DataGridTextColumn Header="Ümumi" Width="60" FontSize="13" FontWeight="SemiBold" Binding="{Binding KOST_ALL}">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type TextBlock}">
+              <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+              <Setter Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+              <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridTextColumn>
+        <DataGridTextColumn Header="" Width="20"/>
+        <DataGridTemplateColumn Width="310">
+          <DataGridColumn.Header>
+            <StackPanel>
+              <Label Content="Şalvar" FontWeight="Bold" HorizontalAlignment="Center"/>
+              <StackPanel Orientation="Horizontal">
+                <Label Content="T.Ə. 86" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="Füz. 63" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="Niz. 77" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="H.C." Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="M.İ. 16" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="M.K." Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+              </StackPanel>
+            </StackPanel>
+          </DataGridColumn.Header>
+          <DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding SAL_12}"
+                           Background="{Binding BackgroundColor1}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding SAL_13}"
+                           Background="{Binding BackgroundColor2}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding SAL_14}"
+                           Background="{Binding BackgroundColor3}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding SAL_17}"
+                           Background="{Binding BackgroundColor4}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding SAL_16}"
+                           Background="{Binding BackgroundColor5}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding SAL_18}"
+                           Background="{Binding BackgroundColor6}"/>
+              </StackPanel>
+            </DataTemplate>
+          </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+        <DataGridTextColumn Header="Ümumi" Width="60" FontSize="13" FontWeight="SemiBold" Binding="{Binding SAL_ALL}">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type TextBlock}">
+              <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+              <Setter Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+              <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridTextColumn>
+        <DataGridTextColumn Header="" Width="20"/>
+        <DataGridTemplateColumn Width="310">
+          <DataGridColumn.Header>
+            <StackPanel>
+              <Label Content="Jilet" FontWeight="Bold" HorizontalAlignment="Center"/>
+              <StackPanel Orientation="Horizontal">
+                <Label Content="T.Ə. 86" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="Füz. 63" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="Niz. 77" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="H.C." Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="M.İ. 16" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="M.K." Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+              </StackPanel>
+            </StackPanel>
+          </DataGridColumn.Header>
+          <DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding JIL_12}"
+                           Background="{Binding BackgroundColor1}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding JIL_13}"
+                           Background="{Binding BackgroundColor2}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding JIL_14}"
+                           Background="{Binding BackgroundColor3}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding JIL_17}"
+                           Background="{Binding BackgroundColor4}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding JIL_16}"
+                           Background="{Binding BackgroundColor5}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding JIL_18}"
+                           Background="{Binding BackgroundColor6}"/>
+              </StackPanel>
+            </DataTemplate>
+          </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+        <DataGridTextColumn Header="Ümumi" Width="60" FontSize="13" FontWeight="SemiBold" Binding="{Binding JIL_ALL}">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type TextBlock}">
+              <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+              <Setter Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+              <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridTextColumn>
+        <DataGridTextColumn Header="" Width="20"/>
+        <DataGridTemplateColumn Width="310">
+          <DataGridColumn.Header>
+            <StackPanel>
+              <Label Content="Köynək" FontWeight="Bold" HorizontalAlignment="Center"/>
+              <StackPanel Orientation="Horizontal">
+                <Label Content="T.Ə. 86" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="Füz. 63" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="Niz. 77" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="H.C." Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="M.İ. 16" Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Line Stroke="LightGray" X1="1" X2="1" Y1="0" Y2="25"/>
+                <Label Content="M.K." Width="50" HorizontalAlignment="Center" HorizontalContentAlignment="Center"/>
+              </StackPanel>
+            </StackPanel>
+          </DataGridColumn.Header>
+          <DataGridTemplateColumn.CellTemplate>
+            <DataTemplate>
+              <StackPanel Orientation="Horizontal">
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOY_12}"
+                           Background="{Binding BackgroundColor1}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOY_13}"
+                           Background="{Binding BackgroundColor2}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOY_14}"
+                           Background="{Binding BackgroundColor3}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOY_17}"
+                           Background="{Binding BackgroundColor4}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOY_16}"
+                           Background="{Binding BackgroundColor5}"/>
+                <TextBlock Width="50" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" Text="{Binding KOY_18}"
+                           Background="{Binding BackgroundColor6}"/>
+              </StackPanel>
+            </DataTemplate>
+          </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+        <DataGridTextColumn Header="Ümumi" Width="60" FontSize="13" FontWeight="SemiBold" Binding="{Binding KOY_ALL}">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type TextBlock}">
+              <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+              <Setter Property="FrameworkElement.VerticalAlignment" Value="Center"/>
+              <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridTextColumn>
+      </DataGrid.Columns>
+    </DataGrid>
+  </Grid>
+</UserControl>

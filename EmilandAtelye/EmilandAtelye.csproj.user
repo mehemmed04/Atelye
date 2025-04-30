@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Page Update="Domain\Views\Cashboxs\CashboxMIView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\Cashboxs\CashboxView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\Cashboxs\InsertExpenseView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\ChangesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\dailyexpenseview.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\Debts\DebtsMI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\Debts\DebtsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\Expenses\ExpensesMIView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\Expenses\ExpenseView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\HandoverView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\Ironings\Ironing1View.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\Ironings\Ironing2View.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\Ironings\IroningDailyView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\MeasurementView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\MSBookView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\OrderViews\AddOrderView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\OrderViews\OrderF.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\OrderViews\OrderHC.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\OrderViews\OrderMI.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\OrderViews\OrderMK.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\OrderViews\OrderN.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\OrderViews\OrderT.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\OrderViews\UpdateOrderView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Domain\Views\StockView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

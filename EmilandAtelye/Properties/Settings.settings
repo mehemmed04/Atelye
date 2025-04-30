@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EmilandAtelye.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=64.226.69.132,7000;Initial Catalog=AZSAtelye;Integrated Security=false;User=sa;Password=Mehemmed_123;MultipleActiveResultSets=true;TrustServerCertificate=True;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

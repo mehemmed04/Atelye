@@ -1,0 +1,246 @@
+<UserControl x:Class="EmilandAtelye.Domain.Views.HandoverView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:EmilandAtelye.Domain.Views">
+  <Grid Background="White">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+      <Grid Margin="0 0 20 0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock>Kodu</TextBlock>
+        <TextBox Grid.Row="1" Width="100"
+                 Text="{Binding CustomerCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+      </Grid>
+      <Grid Margin="0 0 20 0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock>Adı</TextBlock>
+        <TextBox Grid.Row="1" Width="100"
+                 Text="{Binding CustomerName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+      </Grid>
+      <Grid Margin="0 0 20 0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock>Soyadı</TextBlock>
+        <TextBox Grid.Row="1" Width="100"
+                 Text="{Binding CustomerSurname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+      </Grid>
+      <Grid Margin="0 0 20 0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock>Qeyd</TextBlock>
+        <TextBox Grid.Row="1" Width="100"
+                 Text="{Binding CustomerFatherName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+      </Grid>
+      <Grid Margin="0 0 20 0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock>Mobil</TextBlock>
+        <TextBox Grid.Row="1" Width="100"
+                 Text="{Binding CustomerMobile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+      </Grid>
+      <Grid Margin="0 0 20 0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock>Tel</TextBlock>
+        <TextBox Grid.Row="1" Width="100"
+                 Text="{Binding CustomerTel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+      </Grid>
+      <Grid Margin="0 25 20 0">
+        <Button Width="20" Height="20" Command="{Binding ResetCommand, Mode=TwoWay}">
+          <ContentControl.Content>
+            <Image Source="../Images/reset.png" Stretch="Uniform"/>
+          </ContentControl.Content>
+        </Button>
+      </Grid>
+      <Grid Margin="0 0 20 0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock>Filial</TextBlock>
+        <ComboBox Grid.Row="1" Width="150" DisplayMemberPath="DepartmentName" ItemsSource="{Binding Departments}"
+                  SelectedItem="{Binding SelectedDepartment}"/>
+      </Grid>
+      <Grid Margin="0 25 20 0">
+        <Button Width="20" Height="20" Foreground="Red" FontWeight="Bold" Command="{Binding BCommand, Mode=TwoWay}">B</Button>
+      </Grid>
+    </StackPanel>
+    <DataGrid x:Name="DataGrid1" Grid.Row="1" AutoGenerateColumns="False" Visibility="Visible"
+              HeadersVisibility="All" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="False"
+              Margin="10" ItemsSource="{Binding Handovers, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+              SelectedItem="{Binding SelectedHandover, Mode=TwoWay}">
+      <FrameworkElement.Resources>
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+          <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
+        </Style>
+      </FrameworkElement.Resources>
+      <DataGrid.RowStyle>
+        <Style TargetType="{x:Type DataGridRow}">
+          <Setter Property="Control.Background" Value="{Binding RowBackground}"/>
+        </Style>
+      </DataGrid.RowStyle>
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Kodu" FontWeight="SemiBold" FontSize="13" Width="50" Binding="{Binding CustomerId}"/>
+        <DataGridTextColumn Header="Adi" FontWeight="SemiBold" FontSize="13" Width="100" Binding="{Binding CusName}"/>
+        <DataGridTextColumn Header="Soyadi" FontWeight="SemiBold" FontSize="13" Width="100" Binding="{Binding CusSurname}"/>
+        <DataGridTextColumn Header="Qeyd" FontWeight="SemiBold" FontSize="13" Width="90" Binding="{Binding CusFatherName}"/>
+        <DataGridTextColumn Header="Mobil" FontWeight="SemiBold" FontSize="13" Width="100" Binding="{Binding CusGSM}"/>
+        <DataGridTextColumn Header="Tel" FontWeight="SemiBold" FontSize="13" Width="100" Binding="{Binding CusTelNo}"/>
+        <DataGridTextColumn Header="Borc" FontWeight="SemiBold" FontSize="13" Width="60"
+                            Binding="{Binding RemainTotalAll, StringFormat={0:#}}">
+          <DataGridColumn.CellStyle>
+            <Style TargetType="{x:Type DataGridCell}">
+              <Setter Property="Control.Foreground" Value="Black"/>
+              <Setter Property="FrameworkElement.ToolTip" Value="{Binding RemainTotalAll}"/>
+              <Style.Triggers>
+                <DataTrigger Binding="{Binding RowBackground}" Value="Red">
+                  <Setter Property="Control.Foreground" Value="Black"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding RowBackground}" Value="LightYellow">
+                  <Setter Property="Control.Foreground" Value="Black"/>
+                </DataTrigger>
+              </Style.Triggers>
+            </Style>
+          </DataGridColumn.CellStyle>
+        </DataGridTextColumn>
+        <DataGridTextColumn Header="P" Width="20" FontWeight="SemiBold" FontSize="13">
+          <DataGridColumn.CellStyle>
+            <Style TargetType="{x:Type DataGridCell}">
+              <Setter Property="Control.Background" Value="{Binding PBackground}"/>
+              <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
+            </Style>
+          </DataGridColumn.CellStyle>
+        </DataGridTextColumn>
+        <DataGridTextColumn Header="T" Width="30" FontWeight="SemiBold" FontSize="13">
+          <DataGridColumn.CellStyle>
+            <Style TargetType="{x:Type DataGridCell}">
+              <Setter Property="Control.Background" Value="{Binding TBackground}"/>
+              <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
+            </Style>
+          </DataGridColumn.CellStyle>
+        </DataGridTextColumn>
+        <DataGridTextColumn Header="Təhvil səbəbi" FontWeight="SemiBold" FontSize="13" Width="100" Binding="{Binding CusGSM}"/>
+        <DataGridCheckBoxColumn Header="Z1" Width="25">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type CheckBox}">
+              <Setter Property="FrameworkElement.Tag" Value="GCallIdTime"/>
+              <Setter Property="ToggleButton.IsChecked" Value="{Binding GCallId, Mode=TwoWay}"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridCheckBoxColumn>
+        <DataGridTextColumn Header="Vaxtı" FontWeight="SemiBold" FontSize="13" Width="80" Binding="{Binding GCallIdTime}"/>
+        <DataGridCheckBoxColumn Header="Z2" Width="25">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type CheckBox}">
+              <Setter Property="FrameworkElement.Tag" Value="GCallIdTime2"/>
+              <Setter Property="ToggleButton.IsChecked" Value="{Binding GCallId2, Mode=TwoWay}"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridCheckBoxColumn>
+        <DataGridTextColumn Header="Vaxtı" FontWeight="SemiBold" FontSize="13" Width="80" Binding="{Binding GCallIdTime2}"/>
+        <DataGridCheckBoxColumn Header="Z3" Width="25">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type CheckBox}">
+              <Setter Property="FrameworkElement.Tag" Value="GCallIdTime3"/>
+              <Setter Property="ToggleButton.IsChecked" Value="{Binding GCallId3, Mode=TwoWay}"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridCheckBoxColumn>
+        <DataGridTextColumn Header="Vaxtı" FontWeight="SemiBold" FontSize="13" Width="80" Binding="{Binding GCallIdTime3}"/>
+        <DataGridCheckBoxColumn Header="S1" Width="25">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type CheckBox}">
+              <Setter Property="FrameworkElement.Tag" Value="GSmsIdTime"/>
+              <Setter Property="ToggleButton.IsChecked" Value="{Binding GSmsId, Mode=TwoWay}"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridCheckBoxColumn>
+        <DataGridTextColumn Header="Vaxtı" FontWeight="SemiBold" FontSize="13" Width="80" Binding="{Binding GSmsIdTime}"/>
+        <DataGridCheckBoxColumn Header="S2" Width="25">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type CheckBox}">
+              <Setter Property="FrameworkElement.Tag" Value="GSmsIdTime2"/>
+              <Setter Property="ToggleButton.IsChecked" Value="{Binding GSmsId2, Mode=TwoWay}"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridCheckBoxColumn>
+        <DataGridTextColumn Header="Vaxtı" FontWeight="SemiBold" FontSize="13" Width="80" Binding="{Binding GSmsIdTime2}"/>
+        <DataGridCheckBoxColumn Header="S3" Width="25">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type CheckBox}">
+              <Setter Property="FrameworkElement.Tag" Value="GSmsIdTime3"/>
+              <Setter Property="ToggleButton.IsChecked" Value="{Binding GSmsId3, Mode=TwoWay}"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridCheckBoxColumn>
+        <DataGridTextColumn Header="Vaxtı" FontWeight="SemiBold" FontSize="13" Width="90" Binding="{Binding GSmsIdTime3}"/>
+        <DataGridTextColumn Header="Qeyd" FontWeight="SemiBold" FontSize="13" Width="100" Binding="{Binding CallNote}"/>
+      </DataGrid.Columns>
+    </DataGrid>
+    <DataGrid x:Name="DataGridDouble" Grid.Row="1" AutoGenerateColumns="False" Visibility="Collapsed"
+              HeadersVisibility="All" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="False"
+              Margin="10" ItemsSource="{Binding UserOrders, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+      <FrameworkElement.Resources>
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+          <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
+        </Style>
+      </FrameworkElement.Resources>
+      <DataGrid.RowStyle>
+        <Style TargetType="{x:Type DataGridRow}">
+          <Setter Property="Control.Background" Value="{Binding RowBackground}"/>
+        </Style>
+      </DataGrid.RowStyle>
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Sifaris kodu" FontWeight="SemiBold" FontSize="13" Width="145" Binding="{Binding FinanceId}"/>
+        <DataGridTextColumn Header="Tarix" FontWeight="SemiBold" FontSize="13" Width="145" Binding="{Binding RegDate}"/>
+        <DataGridTextColumn Header="Tipi" FontWeight="SemiBold" FontSize="13" Width="100" Binding="{Binding GroupGen2Id}"/>
+        <DataGridTextColumn Header="Barkod" FontWeight="SemiBold" FontSize="13" Width="100" Binding="{Binding BarCode}"/>
+        <DataGridTextColumn Header="Qiymet" FontWeight="SemiBold" FontSize="13" Width="90" Binding="{Binding PriceTotal}"/>
+        <DataGridTextColumn Header="Son qiymet" FontWeight="SemiBold" FontSize="13" Width="100"
+                            Binding="{Binding LastPriceTotal}"/>
+        <DataGridTextColumn Header="Borc" FontWeight="SemiBold" FontSize="13" Width="100" Binding="{Binding RemainTotal}"/>
+        <DataGridTextColumn Header="Təcili" FontWeight="SemiBold" FontSize="13" Width="100" Binding="{Binding STUrgent}"/>
+        <DataGridTextColumn Header="Təhvil səbəbi" FontWeight="SemiBold" FontSize="13" Width="100"
+                            Binding="{Binding GivenNote}"/>
+        <DataGridCheckBoxColumn Header="T" Width="20">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type CheckBox}">
+              <Setter Property="FrameworkElement.Tag" Value="GivenDate"/>
+              <Setter Property="ToggleButton.IsChecked" Value="{Binding GivenId, Mode=TwoWay}"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridCheckBoxColumn>
+        <DataGridTextColumn Header=" Tehvil vaxtı" FontWeight="SemiBold" FontSize="13" Width="145"
+                            Binding="{Binding GivenDate}"/>
+        <DataGridCheckBoxColumn Header="P" Width="20">
+          <DataGridBoundColumn.ElementStyle>
+            <Style TargetType="{x:Type CheckBox}">
+              <Setter Property="FrameworkElement.Tag" Value="FittingDate"/>
+              <Setter Property="ToggleButton.IsChecked" Value="{Binding FittingId, Mode=TwoWay}"/>
+            </Style>
+          </DataGridBoundColumn.ElementStyle>
+        </DataGridCheckBoxColumn>
+        <DataGridTextColumn Header="Vaxtı" FontWeight="SemiBold" FontSize="13" Width="145" Binding="{Binding FittingDate}"/>
+      </DataGrid.Columns>
+    </DataGrid>
+  </Grid>
+</UserControl>

@@ -1,0 +1,803 @@
+<UserControl x:Class="EmilandAtelye.Domain.Views.OrderViews.OrderMK"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:EmilandAtelye.Domain.Views.OrderViews"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors">
+  <FrameworkElement.Resources>
+    <DataTemplate x:Key="OdenisAznHeader">
+      <TextBlock TextAlignment="Center" Foreground="Purple" FontWeight="Bold">
+        <Run Text="Ödəniş"/>
+        <LineBreak/>
+        <Run Text="AZN"/>
+      </TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="OdenisUsdHeader">
+      <TextBlock TextAlignment="Center" Foreground="Purple" FontWeight="Bold">
+        <Run Text="Ödəniş"/>
+        <LineBreak/>
+        <Run Text="USD"/>
+      </TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="OdenisEurHeader">
+      <TextBlock TextAlignment="Center" Foreground="Purple" FontWeight="Bold">
+        <Run Text="Ödəniş"/>
+        <LineBreak/>
+        <Run Text="EUR"/>
+      </TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="TeciliHeader">
+      <TextBlock TextAlignment="Center" Margin="3" Foreground="Black" FontWeight="Bold">
+        <Run Text="Təcili"/>
+        <LineBreak/>
+      </TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="AddButtonTemplate">
+      <TextBlock TextAlignment="Center" Text="+" HorizontalAlignment="Center" Margin="10,0,0,0" Foreground="Black"
+                 FontWeight="Bold"/>
+    </DataTemplate>
+    <DataTemplate x:Key="OdenisRubHeader">
+      <TextBlock TextAlignment="Center" Foreground="Purple" FontWeight="Bold">
+        <Run Text="Ödəniş"/>
+        <LineBreak/>
+        <Run Text="RUB"/>
+      </TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="BorcAznHeader">
+      <TextBlock TextAlignment="Center" Foreground="Red" FontWeight="Bold">
+        <Run Text="Borc"/>
+        <LineBreak/>
+        <Run Text="(AZN)"/>
+      </TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="SonQiymetHeader">
+      <TextBlock TextAlignment="Center" FontWeight="Bold">
+        <Run Text="Son"/>
+        <LineBreak/>
+        <Run Text="Qiym"/>
+      </TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="QiymetiAzn">
+      <TextBlock TextAlignment="Center" FontWeight="Bold">
+        <Run Text="Qiyməti"/>
+        <LineBreak/>
+        <Run Text="AZN"/>
+      </TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="VerticalHeaderTemplate">
+      <TextBlock FontWeight="Bold" TextAlignment="Center" Text="{Binding}">
+        <FrameworkElement.LayoutTransform>
+          <RotateTransform Angle="270"/>
+        </FrameworkElement.LayoutTransform>
+      </TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="BoldHeaderTemplate">
+      <TextBlock FontWeight="Bold" TextAlignment="Center" Text="{Binding}"/>
+    </DataTemplate>
+  </FrameworkElement.Resources>
+  <Grid Background="White">
+    <Grid Margin="10,10,10,0" Background="White" RenderTransformOrigin="0.497,0.319">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="100"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid Column="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+          <TextBlock Width="40" Text="Kodu" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left"
+                   Text="{Binding CustomerId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <UIElement.InputBindings>
+              <KeyBinding Key="Enter" Command="{Binding Path=GetCustomerOrdersCommand}"/>
+            </UIElement.InputBindings>
+          </TextBox>
+          <TextBlock Width="40" Margin="0,10" Text="Tipi" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <ComboBox Width="110" HorizontalAlignment="Left" DisplayMemberPath="GroupGen2Name"
+                    ItemsSource="{Binding Types, Mode=TwoWay}" SelectedItem="{Binding SelectedType, Mode=TwoWay}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+          <TextBlock Width="40" Text="Adı" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left"
+                   Text="{Binding CustomerName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <UIElement.InputBindings>
+              <KeyBinding Key="Enter" Command="{Binding Path=GetCustomerOrdersCommand}"/>
+            </UIElement.InputBindings>
+          </TextBox>
+          <TextBlock Width="50" Margin="0,10" Text="Barkod" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left"
+                   Text="{Binding BarCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+          <TextBlock Width="40" Text="Soyadı" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left"
+                   Text="{Binding CustomerSurname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            <UIElement.InputBindings>
+              <KeyBinding Key="Enter" Command="{Binding Path=GetCustomerOrdersCommand}"/>
+            </UIElement.InputBindings>
+          </TextBox>
+          <TextBlock Width="61" Margin="0,10" Text="Qiyməti" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left"
+                   Text="{Binding Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+          <TextBlock Width="40" Text="Qeyd" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left"
+                   Text="{Binding Note, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          <TextBlock Width="89" Margin="0,10" Text="Son Qiymeti" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left"
+                   Text="{Binding LastPrice, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="4">
+          <TextBlock Width="40" Text="Mobil" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left"
+                   Text="{Binding CustomerGsm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          <TextBlock Width="89" Margin="0,10" Text="Ödəniş (Beh)" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left"
+                   Text="{Binding Beh, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="5">
+          <TextBlock Width="40" Text="Tel" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="70" HorizontalAlignment="Left"
+                   Text="{Binding CustomerTel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          <StackPanel Margin="0,40,0,0" Orientation="Horizontal">
+            <TextBlock Width="40" Text="Təcili" FontWeight="Bold" FontSize="14"/>
+            <CheckBox Width="18" IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="6">
+          <TextBlock Width="95" Text="Təhvil tarixi" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <DatePicker Margin="0,5"/>
+          <TextBlock Width="89" Text="Ölçü götürən" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <ComboBox Width="110" HorizontalAlignment="Left" DisplayMemberPath="TailorShortName"
+                    SelectedItem="{Binding SelectedTypeForMeasurment, Mode=TwoWay}"
+                    ItemsSource="{Binding Tailors, Mode=TwoWay}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="7">
+          <TextBlock Width="95" Text="Valyuta" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <ComboBox Width="110" HorizontalAlignment="Left" DisplayMemberPath="CurType"
+                    SelectedItem="{Binding SelectedCurrency, Mode=TwoWay}"
+                    ItemsSource="{Binding Currencies, Mode=TwoWay}"/>
+          <Grid>
+            <Grid>
+              <StackPanel Orientation="Horizontal">
+                <Button Margin="10" Width="100" Content="Save" Height="30" HorizontalAlignment="Left"
+                        Background="ForestGreen" FontSize="17" Foreground="White" Command="{Binding SaveCommand}"/>
+              </StackPanel>
+            </Grid>
+          </Grid>
+        </StackPanel>
+        <StackPanel Grid.Column="8" Orientation="Horizontal">
+          <Button Height="24" Margin="13" Width="30" Command="{Binding ResetCommand, Mode=TwoWay}">
+            <ContentControl.Content>
+              <Image Source="/Domain/Images/reset.png" Stretch="Uniform" RenderTransformOrigin="3.735,1.056"/>
+            </ContentControl.Content>
+          </Button>
+          <Button x:Name="aButtonForDefault" Height="24" Content="A" FontSize="18" FontWeight="Bold"
+                  Foreground="Green" HorizontalContentAlignment="Center" Width="30" Command="{Binding ACommand}"/>
+          <Button Click="Button_Click" x:Name="bButtonForDefault" Visibility="Visible" Height="24" Margin="13"
+                  Content="B" FontSize="18                         " FontWeight="Bold" Foreground="Red"
+                  HorizontalContentAlignment="Center" Width="30" Command="{Binding BCommand}"/>
+          <Button Click="KButtonForB_Click" x:Name="KButtonForB" Height="24" Visibility="Collapsed" Margin="13"
+                  Content="K" FontSize="18" FontWeight="Bold" Foreground="Red" HorizontalContentAlignment="Center"
+                  Width="30" Command="{Binding CardButtonClick}"/>
+        </StackPanel>
+      </Grid>
+      <Grid x:Name="gridForDataGridDefault" Row="1" Visibility="Visible" Margin="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition x:Name="FirstColumn" Width="700"/>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Row="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+          </Grid.RowDefinitions>
+          <DataGrid Loaded="StockDataGrid1_Loaded" MouseDoubleClick="DataGrid1_MouseDoubleClick" x:Name="DataGrid1"
+                    CanUserAddRows="True" Visibility="Visible" Margin="0" AutoGenerateColumns="False"
+                    HeadersVisibility="All" SelectedItem="{Binding SelectedDataGridItem}"
+                    ItemsSource="{Binding LeftOrders, Mode=TwoWay}">
+            <Interaction.Triggers>
+              <EventTrigger EventName="MouseDoubleClick">
+                <InvokeCommandAction Command="{Binding LeftAndRightDataLoadedForDoubleClick}"
+                                     CommandParameter="{Binding SelectedDataGridItem}"/>
+              </EventTrigger>
+            </Interaction.Triggers>
+            <DataGrid.ColumnHeaderStyle>
+              <Style TargetType="{x:Type DataGridColumnHeader}">
+                <Setter Property="Control.FontSize" Value="12"/>
+              </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Tarix"
+                                  Width="70" Binding="{Binding OperDate, StringFormat={0:dd/MM/yyyy}}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Kod" Width="40"
+                                  Binding="{Binding CustomerId}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Adı" Width="75"
+                                  Binding="{Binding CusName}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Soyadi"
+                                  Width="80" Binding="{Binding CusSurname}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Qiym" Width="44"
+                                  Binding="{Binding PriceTotal}"/>
+              <DataGridTextColumn FontWeight="SemiBold" HeaderTemplate="{StaticResource SonQiymetHeader}" Width="53"
+                                  Binding="{Binding LastPriceTotal}"/>
+              <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisUsdHeader}"
+                                  Width="63" Binding="{Binding PayTotUsd}"/>
+              <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisAznHeader}"
+                                  Width="63" Binding="{Binding PayTotAzn}"/>
+              <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisEurHeader}"
+                                  Width="63" Binding="{Binding PayTotEur}"/>
+              <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisRubHeader}"
+                                  Width="63" Binding="{Binding PayTotRur}"/>
+              <DataGridTextColumn FontWeight="SemiBold" Foreground="Red" HeaderTemplate="{StaticResource BorcAznHeader}" Width="45"
+                                  Binding="{Binding RemainTotalAll, StringFormat={0:0}}"/>
+            </DataGrid.Columns>
+          </DataGrid>
+          <Grid x:Name="FooterGrid1" Row="1" Background="LightGray" Margin="7,0,0,0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="70"/>
+              <ColumnDefinition Width="40"/>
+              <ColumnDefinition Width="75"/>
+              <ColumnDefinition Width="80"/>
+              <ColumnDefinition Width="44"/>
+              <ColumnDefinition Width="53"/>
+              <ColumnDefinition Width="63"/>
+              <ColumnDefinition Width="63"/>
+              <ColumnDefinition Width="63"/>
+              <ColumnDefinition Width="63"/>
+              <ColumnDefinition Width="45"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="2" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="3" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="4" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="5" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="6" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding LeftUsdAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="7" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding LeftAznAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="8" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding LeftEuroAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="9" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding LeftRubAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="10" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding LeftDebtAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+          </Grid>
+        </Grid>
+        <GridSplitter x:Name="FirstGridSplitter" Visibility="Visible" Grid.Column="1" Width="2"
+                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Gray"/>
+        <Grid Column="2">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+          </Grid.RowDefinitions>
+          <DataGrid Loaded="StockDataGrid2_Loaded" x:Name="DataGrid2" Grid.Row="0" Visibility="Visible" Grid.Column="2"
+                    Margin="0" AutoGenerateColumns="False" ItemsSource="{Binding RightOrders, Mode=TwoWay}">
+            <DataGrid.ColumnHeaderStyle>
+              <Style TargetType="{x:Type DataGridColumnHeader}">
+                <Setter Property="Control.FontSize" Value="12"/>
+              </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Tarix"
+                                  Width="70" Binding="{Binding OperDate, StringFormat={0:dd/MM/yyyy}}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Qiym" Width="44"
+                                  Binding="{Binding PriceTotal}"/>
+              <DataGridTextColumn FontWeight="SemiBold" HeaderTemplate="{StaticResource SonQiymetHeader}" Width="53"
+                                  Binding="{Binding LastPriceTotal}"/>
+              <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisUsdHeader}"
+                                  Width="63" Binding="{Binding PayTotUsd}"/>
+              <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisAznHeader}"
+                                  Width="63" Binding="{Binding PayTotAzn}"/>
+              <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisEurHeader}"
+                                  Width="63" Binding="{Binding PayTotEur}"/>
+              <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisRubHeader}"
+                                  Width="63" Binding="{Binding PayTotRur}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Kost"
+                                  Width="29" Binding="{Binding Kostyum}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Ko-S"
+                                  Width="31" Binding="{Binding Kostyum_Smoking}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Pen"
+                                  Width="26" Binding="{Binding Pencek}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Salvar"
+                                  Width="40" Binding="{Binding Shalvar}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Köy"
+                                  Width="26" Binding="{Binding Koynek}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Kö-S"
+                                  Width="32" Binding="{Binding Koynek_Smoking}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Q-Don"
+                                  Width="40" Binding="{Binding Lady_Dress}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Q-Kost"
+                                  Width="40" Binding="{Binding Lady_Kostyum}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Q-Pen"
+                                  Width="37" Binding="{Binding Lady_Pencek}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Q-Şalv"
+                                  Width="40" Binding="{Binding Lady_Shalvar}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Frak"
+                                  Width="33" Binding="{Binding Frak}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Plaş"
+                                  Width="30" Binding="{Binding Plash}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Palto"
+                                  Width="36" Binding="{Binding Palto}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Jilet"
+                                  Width="30" Binding="{Binding Jilet}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Jil-H"
+                                  Width="33" Binding="{Binding Hazir_Jilet}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Qurş"
+                                  Width="33" Binding="{Binding Qurshaq}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Bab"
+                                  Width="33" Binding="{Binding Bab}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Ayaq"
+                                  Width="33" Binding="{Binding Ayaqqabi}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Qals"
+                                  Width="33" Binding="{Binding Qalstuk}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Zap"
+                                  Width="33" Binding="{Binding Zapinka}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource VerticalHeaderTemplate}" FontWeight="SemiBold" Header="Yubka"
+                                  Width="40" Binding="{Binding Skirt}"/>
+            </DataGrid.Columns>
+          </DataGrid>
+          <Grid x:Name="FooterGrid2" Row="1" Background="LightGray" Margin="7,0,0,0">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="70"/>
+              <ColumnDefinition Width="44"/>
+              <ColumnDefinition Width="53"/>
+              <ColumnDefinition Width="63"/>
+              <ColumnDefinition Width="63"/>
+              <ColumnDefinition Width="63"/>
+              <ColumnDefinition Width="63"/>
+              <ColumnDefinition Width="29"/>
+              <ColumnDefinition Width="31"/>
+              <ColumnDefinition Width="26"/>
+              <ColumnDefinition Width="40"/>
+              <ColumnDefinition Width="26"/>
+              <ColumnDefinition Width="32"/>
+              <ColumnDefinition Width="40"/>
+              <ColumnDefinition Width="40"/>
+              <ColumnDefinition Width="37"/>
+              <ColumnDefinition Width="40"/>
+              <ColumnDefinition Width="33"/>
+              <ColumnDefinition Width="30"/>
+              <ColumnDefinition Width="36"/>
+              <ColumnDefinition Width="30"/>
+              <ColumnDefinition Width="33"/>
+              <ColumnDefinition Width="33"/>
+              <ColumnDefinition Width="33"/>
+              <ColumnDefinition Width="33"/>
+              <ColumnDefinition Width="33"/>
+              <ColumnDefinition Width="33"/>
+              <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="2" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="3" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding RightUsdAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="4" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding RightAznAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="5" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding RightEuroAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="6" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding RightRubAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="7" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding KostAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="8" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding KosAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="9" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding PenAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="10" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding SalvAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="11" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding KoyAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="12" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding KoysAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="13" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding QDonAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="14" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding QKostAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="15" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding QPenAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="16" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding QSalvAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="17" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding FrakAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="18" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding PlasAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="19" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding PaltoAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="20" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding JiletAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="21" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding JiHAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="22" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding QursAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="23" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding BabAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="24" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding AyaqAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="25" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding QalsAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="26" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding ZapAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+            <Border Grid.Column="27" BorderBrush="Black" BorderThickness="0.5" Height="16">
+              <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding YubkaAll, Mode=TwoWay}"/>
+              </Grid>
+            </Border>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid x:Name="gridForDataGridB" Row="1" Visibility="Collapsed" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <DataGrid Loaded="StockDataGrid1_Loaded" x:Name="DataGridForB" Visibility="Visible" Margin="0"
+                  AutoGenerateColumns="False" HeadersVisibility="All"
+                  ItemsSource="{Binding DebtForOrder, Mode=TwoWay}">
+          <DataGrid.ColumnHeaderStyle>
+            <Style TargetType="{x:Type DataGridColumnHeader}">
+              <Setter Property="Control.FontSize" Value="12"/>
+            </Style>
+          </DataGrid.ColumnHeaderStyle>
+          <DataGrid.Columns>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Tarix"
+                                Width="70" Binding="{Binding OperDate, StringFormat={0:dd/MM/yyyy}}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Kod" Width="40"
+                                Binding="{Binding CustomerId}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Adı" Width="75"
+                                Binding="{Binding CusName}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Soyadi"
+                                Width="80" Binding="{Binding CusSurname}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Qiym" Width="44"
+                                Binding="{Binding PriceTotal}"/>
+            <DataGridTextColumn FontWeight="SemiBold" HeaderTemplate="{StaticResource SonQiymetHeader}" Width="53"
+                                Binding="{Binding LastPriceTotal}"/>
+            <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisUsdHeader}"
+                                Width="63" Binding="{Binding PayTotUsd}"/>
+            <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisAznHeader}"
+                                Width="63" Binding="{Binding PayTotAzn}"/>
+            <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisEurHeader}"
+                                Width="63" Binding="{Binding PayTotEur}"/>
+            <DataGridTextColumn FontWeight="SemiBold" Foreground="Purple" HeaderTemplate="{StaticResource OdenisRubHeader}"
+                                Width="63" Binding="{Binding PayTotRur}"/>
+            <DataGridTextColumn FontWeight="SemiBold" Foreground="Red" HeaderTemplate="{StaticResource BorcAznHeader}" Width="45"
+                                Binding="{Binding RemainTotalAll, StringFormat={0:0}}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Mobil"
+                                Width="80" Binding="{Binding CusTelNo}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Tel" Width="80"
+                                Binding="{Binding CusGsm}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Qeyd" Width="80"
+                                Binding="{Binding CusFatherName}"/>
+          </DataGrid.Columns>
+        </DataGrid>
+        <Grid x:Name="FooterGridForB" Row="1" Background="LightGray" Margin="7,0,0,0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="75"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="44"/>
+            <ColumnDefinition Width="53"/>
+            <ColumnDefinition Width="63"/>
+            <ColumnDefinition Width="63"/>
+            <ColumnDefinition Width="63"/>
+            <ColumnDefinition Width="63"/>
+            <ColumnDefinition Width="45"/>
+          </Grid.ColumnDefinitions>
+          <Border Grid.Column="0" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock/>
+            </Grid>
+          </Border>
+          <Border Grid.Column="1" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock/>
+            </Grid>
+          </Border>
+          <Border Grid.Column="2" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock/>
+            </Grid>
+          </Border>
+          <Border Grid.Column="3" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock/>
+            </Grid>
+          </Border>
+          <Border Grid.Column="4" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock/>
+            </Grid>
+          </Border>
+          <Border Grid.Column="5" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock/>
+            </Grid>
+          </Border>
+          <Border Grid.Column="6" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding LeftUsdAll, Mode=TwoWay}"/>
+            </Grid>
+          </Border>
+          <Border Grid.Column="7" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding LeftAznAll, Mode=TwoWay}"/>
+            </Grid>
+          </Border>
+          <Border Grid.Column="8" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding LeftEuroAll, Mode=TwoWay}"/>
+            </Grid>
+          </Border>
+          <Border Grid.Column="9" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding LeftRubAll, Mode=TwoWay}"/>
+            </Grid>
+          </Border>
+          <Border Grid.Column="10" BorderBrush="Black" BorderThickness="0.5" Height="16">
+            <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+              <TextBlock Foreground="Red" FontWeight="Bold" Text="{Binding LeftDebtAll, Mode=TwoWay}"/>
+            </Grid>
+          </Border>
+        </Grid>
+      </Grid>
+      <Grid x:Name="gridForDataGridCard" Row="1" Visibility="Collapsed" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Loaded="StockDataGrid1_Loaded" x:Name="DataGridForCard" Visibility="Visible" Margin="0"
+                  AutoGenerateColumns="False" HeadersVisibility="All" ItemsSource="{Binding CardOrders, Mode=TwoWay}">
+          <DataGrid.ColumnHeaderStyle>
+            <Style TargetType="{x:Type DataGridColumnHeader}">
+              <Setter Property="Control.FontSize" Value="12"/>
+              <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
+            </Style>
+          </DataGrid.ColumnHeaderStyle>
+          <DataGrid.Columns>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Filial"
+                                Width="70" Binding="{Binding DepartShortName}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Kod" Width="60"
+                                Binding="{Binding CustomerId}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Adı" Width="85"
+                                Binding="{Binding CusName}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Soyadi"
+                                Width="100" Binding="{Binding CusSurname}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Qeyd" Width="64"
+                                Binding="{Binding CusFatherName}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Barkod"
+                                Width="84" Binding="{Binding FinanceNote}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Satış tarixi"
+                                Width="100" Binding="{Binding OperDate, StringFormat={0:dd/MM/yyyy}}"/>
+            <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="İstifadə tarixi"
+                                Width="100" Binding="{Binding EditDate, StringFormat={0:dd/MM/yyyy}}"/>
+            <DataGridTextColumn FontWeight="SemiBold" HeaderTemplate="{StaticResource QiymetiAzn}" Width="83"
+                                Binding="{Binding PayedTotalAzn}"/>
+          </DataGrid.Columns>
+        </DataGrid>
+      </Grid>
+      <Grid x:Name="gridForDataGridDoubleClick" Row="1" Visibility="Collapsed">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition x:Name="FirstColumnDoubleClick" Width="740"/>
+          <ColumnDefinition Width="3"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Row="0">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <DataGrid Loaded="StockDataGrid1_Loaded" x:Name="DataGridLeftDoubleClick" CanUserAddRows="True"
+                    Visibility="Visible" Margin="0" AutoGenerateColumns="False" HeadersVisibility="All"
+                    SelectedItem="{Binding SelectedFinanceDto}" ItemsSource="{Binding FinanceLeftOrders, Mode=TwoWay}">
+            <Interaction.Triggers>
+              <EventTrigger EventName="MouseDoubleClick">
+                <InvokeCommandAction Command="{Binding UpdateOrderCommand}" CommandParameter="{Binding SelectedFinanceDto}"/>
+              </EventTrigger>
+            </Interaction.Triggers>
+            <DataGrid.ColumnHeaderStyle>
+              <Style TargetType="{x:Type DataGridColumnHeader}">
+                <Setter Property="Control.FontSize" Value="12"/>
+              </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Tarix"
+                                  Width="70" Binding="{Binding OperDate, StringFormat={0:dd/MM/yyyy}}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Tip" Width="40"
+                                  Binding="{Binding GroupGenName}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Barkod"
+                                  Width="75" Binding="{Binding Barcode}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Qiym" Width="80"
+                                  Binding="{Binding PriceTotal}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Son qiym"
+                                  Width="70" Binding="{Binding LastPriceTotal}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Valy" Width="70"
+                                  Binding="{Binding CurTypeName}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Borc (AZN)"
+                                  Width="75" Binding="{Binding RemainTotalAll}"/>
+              <DataGridCheckBoxColumn Header="Təcili" HeaderTemplate="{StaticResource BoldHeaderTemplate}" Width="60"
+                                      Binding="{Binding St_Order}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Təhvil Tarixi"
+                                  Width="90" Binding="{Binding RowDate, StringFormat={0:dd/MM/yyyy}}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Ölçü götürən"
+                                  Width="100" Binding="{Binding TailorName}"/>
+            </DataGrid.Columns>
+          </DataGrid>
+        </Grid>
+        <GridSplitter x:Name="FirstGridSplitterForDoubleClick" Visibility="Visible" Grid.Column="1" Width="2"
+                      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Gray"/>
+        <Grid Column="2">
+          <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <DataGrid Loaded="StockDataGrid2_Loaded" x:Name="DataGrid2ForDoubleClick" Grid.Row="0" Visibility="Visible"
+                    Grid.Column="2" AutoGenerateColumns="False" ItemsSource="{Binding FinanceRightOrders, Mode=TwoWay}">
+            <DataGrid.ColumnHeaderStyle>
+              <Style TargetType="{x:Type DataGridColumnHeader}">
+                <Setter Property="Control.FontSize" Value="12"/>
+              </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Tarix"
+                                  Width="70" Binding="{Binding OperDate, StringFormat={0:dd/MM/yyyy}}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Ödəniş"
+                                  Width="75" Binding="{Binding PayedTotal}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Valy" Width="75"
+                                  Binding="{Binding CurTypeId}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Borc (Azn)"
+                                  Width="75" Binding="{Binding RemainTotalAll}"/>
+              <DataGridTextColumn HeaderTemplate="{StaticResource BoldHeaderTemplate}" FontWeight="SemiBold" Header="Qeyd" Width="75"
+                                  Binding="{Binding CusFatherName}"/>
+            </DataGrid.Columns>
+          </DataGrid>
+        </Grid>
+      </Grid>
+    </Grid>
+  </Grid>
+</UserControl>

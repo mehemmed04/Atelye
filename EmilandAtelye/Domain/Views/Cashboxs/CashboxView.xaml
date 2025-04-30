@@ -1,0 +1,804 @@
+<UserControl x:Class="EmilandAtelye.Domain.Views.Cashboxs.CashboxView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:local="clr-namespace:EmilandAtelye.Domain.Views.Cashboxs"
+             xmlns:local1="clr-namespace:EmilandAtelye.Converters"
+             Background="#F0F0F0">
+  <Grid Margin="10">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+      <StackPanel>
+        <Grid Row="1">
+          <FrameworkElement.Resources>
+            <Style TargetType="{x:Type TextBox}">
+              <Setter Property="TextBoxBase.IsReadOnly" Value="True"/>
+              <Setter Property="Control.Padding" Value="1 3"/>
+              <Setter Property="FrameworkElement.Margin" Value="0"/>
+              <Setter Property="FrameworkElement.Width" Value="80"/>
+              <Setter Property="Control.FontWeight" Value="Bold"/>
+              <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+              <Setter Property="Control.VerticalContentAlignment" Value="Center"/>
+              <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
+              <Setter Property="Control.BorderBrush" Value="Gray"/>
+              <Setter Property="Control.BorderThickness" Value="1"/>
+              <Setter Property="Control.Background" Value="#FFFFFF"/>
+            </Style>
+            <Style x:Key="HeaderStyle" TargetType="{x:Type TextBox}">
+              <Setter Property="Control.Background" Value="Transparent"/>
+              <Setter Property="Control.BorderThickness" Value="0"/>
+              <Setter Property="FrameworkElement.Width" Value="80"/>
+              <Setter Property="Control.FontWeight" Value="Bold"/>
+              <Setter Property="Control.Padding" Value="20 0 0 0"/>
+              <Setter Property="TextBoxBase.IsReadOnly" Value="True"/>
+              <Setter Property="TextBox.TextAlignment" Value="Left"/>
+              <Setter Property="Control.VerticalContentAlignment" Value="Center"/>
+              <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
+              <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="RedForeground" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+              <Setter Property="Control.Foreground" Value="#DE031D"/>
+            </Style>
+            <Style x:Key="TransparentBackground" TargetType="{x:Type TextBox}"
+                   BasedOn="{StaticResource {x:Type TextBox}}">
+              <Setter Property="Control.Background" Value="Transparent"/>
+              <Setter Property="Control.BorderBrush" Value="Black"/>
+              <Setter Property="Control.BorderThickness" Value="1"/>
+            </Style>
+            <Style x:Key="DescriptionTextBox" TargetType="{x:Type TextBox}">
+              <Setter Property="TextBoxBase.IsReadOnly" Value="True"/>
+              <Setter Property="Control.Padding" Value="5 0"/>
+              <Setter Property="FrameworkElement.Margin" Value="0"/>
+              <Setter Property="FrameworkElement.Width" Value="330"/>
+              <Setter Property="Control.FontWeight" Value="Bold"/>
+              <Setter Property="TextBox.TextAlignment" Value="Left"/>
+              <Setter Property="FrameworkElement.HorizontalAlignment" Value="Center"/>
+              <Setter Property="Control.VerticalContentAlignment" Value="Center"/>
+              <Setter Property="Control.HorizontalContentAlignment" Value="Center"/>
+              <Setter Property="Control.Background" Value="Transparent"/>
+              <Setter Property="Control.BorderBrush" Value="Black"/>
+              <Setter Property="Control.BorderThickness" Value="1"/>
+            </Style>
+          </FrameworkElement.Resources>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="750"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Grid Column="0">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="30"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Row="0" Margin="0 -5 0 0">
+              <StackPanel Orientation="Horizontal" Margin="0">
+                <TextBox BorderThickness="0" Width="77" IsReadOnly="True" Padding="0" FontWeight="Medium"
+                         VerticalAlignment="Center" FontSize="16" Background="Transparent" Text="Tarix seç:"/>
+                <DatePicker BorderThickness="0" FontWeight="Medium" FontSize="16" VerticalAlignment="Center" Width="150"
+                            Margin="0 2 0 0" SelectedDate="{Binding SelectedDate, UpdateSourceTrigger=PropertyChanged}"/>
+              </StackPanel>
+            </Grid>
+            <Grid Row="1">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+              <Button x:Name="MyButton" Grid.Row="0" Grid.Column="0" Content="Yüklə" FontSize="16" Background="#01FFFFFF"
+                      Foreground="Black" FontWeight="Black"/>
+              <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource HeaderStyle}" FontSize="16" Text="EM $"/>
+              <TextBox Grid.Row="0" Grid.Column="2" Style="{StaticResource HeaderStyle}" FontSize="16" Text="EM M"/>
+              <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource HeaderStyle}" FontSize="16" Text="BR $"/>
+              <TextBox Grid.Row="0" Grid.Column="4" Style="{StaticResource HeaderStyle}" FontSize="16" Text="BR M"/>
+              <TextBox Grid.Row="0" Grid.Column="5" Style="{StaticResource HeaderStyle}" FontSize="16"/>
+              <TextBox Grid.Row="0" Grid.Column="6" Style="{StaticResource HeaderStyle}" FontSize="16"
+                       Foreground="#DE031D" Text="EM $"/>
+              <TextBox Grid.Row="0" Grid.Column="7" Style="{StaticResource HeaderStyle}" FontSize="16"
+                       Foreground="#DE031D" Text="EM M"/>
+              <TextBox Grid.Row="0" Grid.Column="8" Style="{StaticResource HeaderStyle}" FontSize="16"
+                       Foreground="#DE031D" Text="BR $"/>
+              <TextBox Grid.Row="0" Grid.Column="9" Style="{StaticResource HeaderStyle}" FontSize="16"
+                       Foreground="#DE031D" Text="BR M"/>
+              <TextBox Grid.Row="1" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="KASSA"/>
+              <TextBox Grid.Row="2" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="3" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="T.Ə"/>
+              <TextBox Grid.Row="4" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="EMİL"/>
+              <TextBox Grid.Row="5" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="6" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="ASİF"/>
+              <TextBox Grid.Row="7" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="8" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="FÜZ."/>
+              <TextBox Grid.Row="9" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="EMİL"/>
+              <TextBox Grid.Row="10" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="11" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="ASİF"/>
+              <TextBox Grid.Row="12" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="13" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="NİZ."/>
+              <TextBox Grid.Row="14" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="EMİL"/>
+              <TextBox Grid.Row="15" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="16" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="ASİF"/>
+              <TextBox Grid.Row="17" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text=""/>
+              <TextBox Grid.Row="18" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="H.C."/>
+              <TextBox Grid.Row="19" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="EMİL"/>
+              <TextBox Grid.Row="20" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="21" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="ASİF"/>
+              <TextBox Grid.Row="22" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="USA"/>
+              <TextBox Grid.Row="24" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="25" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="CƏMİ"/>
+              <TextBox Grid.Row="1" Grid.Column="1" Background="#FDD3D1" Text="{Binding DailyCashBox.EditBefRemUsd}"/>
+              <TextBox Grid.Row="1" Grid.Column="2" Background="#FDD3D1" Text="{Binding DailyCashBox.EditBefRemAzn}"/>
+              <TextBox Grid.Row="1" Grid.Column="3" Background="#FDD3D1" Text="{Binding DailyCashBox.EditBefRemUsdBref}"/>
+              <TextBox Grid.Row="1" Grid.Column="4" Background="#FDD3D1" Text="{Binding DailyCashBox.EditBefRemAznBref}"/>
+              <TextBox Grid.Row="1" Grid.Column="6" Text="" Background="#FDD3D1"/>
+              <TextBox Grid.Row="1" Grid.Column="7" Text="" Background="#FDD3D1"/>
+              <TextBox Grid.Row="1" Grid.Column="8" Text="" Background="#FDD3D1"/>
+              <TextBox Grid.Row="1" Grid.Column="9" Text="" Background="#FDD3D1"/>
+              <TextBox Grid.Row="3" Grid.Column="1" Background="#F9FBD4" Text="{Binding DailyCashBox.Edit1Usd}"/>
+              <TextBox Grid.Row="3" Grid.Column="2" Background="#F9FBD4" Text="{Binding DailyCashBox.Edit1Azn}"/>
+              <TextBox Grid.Row="3" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="3" Grid.Column="4" Text="{Binding DailyCashBox.Edit1BAzn}"/>
+              <TextBox Grid.Row="3" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#F9FBD4"
+                       Text="{Binding DailyCashBox.Edit1UsdM}"/>
+              <TextBox Grid.Row="3" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#F9FBD4"
+                       Text="{Binding DailyCashBox.Edit1AznM}"/>
+              <TextBox Grid.Row="3" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="3" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit1BAznM}"/>
+              <TextBox Grid.Row="4" Grid.Column="1" Background="#F9FBD4" Text="{Binding DailyCashBox.EditB1Usd}"/>
+              <TextBox Grid.Row="4" Grid.Column="2" Background="#F9FBD4" Text="{Binding DailyCashBox.EditB1Azn}"/>
+              <TextBox Grid.Row="4" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="4" Grid.Column="4" Text="{Binding DailyCashBox.EditB1BAzn}"/>
+              <TextBox Grid.Row="4" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#F9FBD4"
+                       Text="{Binding DailyCashBox.EditB1UsdM}"/>
+              <TextBox Grid.Row="4" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#F9FBD4"
+                       Text="{Binding DailyCashBox.EditB1AznM}"/>
+              <TextBox Grid.Row="4" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="4" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.EditB1BAznM}"/>
+              <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding DailyCashBox.Edit5Usd}"/>
+              <TextBox Grid.Row="6" Grid.Column="2" Text="{Binding DailyCashBox.Edit5Azn}"/>
+              <TextBox Grid.Row="6" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="6" Grid.Column="4" Text="{Binding DailyCashBox.Edit5BAzn}"/>
+              <TextBox Grid.Row="6" Grid.Column="6" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit5UsdM}"/>
+              <TextBox Grid.Row="6" Grid.Column="7" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit5AznM}"/>
+              <TextBox Grid.Row="6" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="6" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit5BAznM}"/>
+              <TextBox Grid.Row="8" Grid.Column="1" Background="#D7FED5" Text="{Binding DailyCashBox.Edit2Usd}"/>
+              <TextBox Grid.Row="8" Grid.Column="2" Background="#D7FED5" Text="{Binding DailyCashBox.Edit2Azn}"/>
+              <TextBox Grid.Row="8" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="8" Grid.Column="4" Text="{Binding DailyCashBox.Edit2BAzn}"/>
+              <TextBox Grid.Row="8" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#D7FED5"
+                       Text="{Binding DailyCashBox.Edit2UsdM}"/>
+              <TextBox Grid.Row="8" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#D7FED5"
+                       Text="{Binding DailyCashBox.Edit2AznM}"/>
+              <TextBox Grid.Row="8" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="8" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit2BAznM}"/>
+              <TextBox Grid.Row="9" Grid.Column="1" Background="#D7FED5" Text="{Binding DailyCashBox.EditB2Usd}"/>
+              <TextBox Grid.Row="9" Grid.Column="2" Background="#D7FED5" Text="{Binding DailyCashBox.EditB2Azn}"/>
+              <TextBox Grid.Row="9" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="9" Grid.Column="4" Text="{Binding DailyCashBox.EditB2BAzn}"/>
+              <TextBox Grid.Row="9" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#D7FED5"
+                       Text="{Binding DailyCashBox.EditB2UsdM}"/>
+              <TextBox Grid.Row="9" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#D7FED5"
+                       Text="{Binding DailyCashBox.EditB2AznM}"/>
+              <TextBox Grid.Row="9" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="9" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.EditB2BAznM}"/>
+              <TextBox Grid.Row="11" Grid.Column="1" Text="{Binding DailyCashBox.Edit7Usd}"/>
+              <TextBox Grid.Row="11" Grid.Column="2" Text="{Binding DailyCashBox.Edit7Azn}"/>
+              <TextBox Grid.Row="11" Grid.Column="3" Text="{Binding DailyCashBox.Edit7BUsd}"/>
+              <TextBox Grid.Row="11" Grid.Column="4" Text="{Binding DailyCashBox.Edit7BAzn}"/>
+              <TextBox Grid.Row="11" Grid.Column="6" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit7UsdM}"/>
+              <TextBox Grid.Row="11" Grid.Column="7" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit7AznM}"/>
+              <TextBox Grid.Row="11" Grid.Column="8" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit7BUsdM}"/>
+              <TextBox Grid.Row="11" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit7BAznM}"/>
+              <TextBox Grid.Row="13" Grid.Column="1" Background="#D1D2FF" Text="{Binding DailyCashBox.Edit3Usd}"/>
+              <TextBox Grid.Row="13" Grid.Column="2" Background="#D1D2FF" Text="{Binding DailyCashBox.Edit3Azn}"/>
+              <TextBox Grid.Row="13" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="13" Grid.Column="4" Text="{Binding DailyCashBox.Edit3BAzn}"/>
+              <TextBox Grid.Row="13" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#D1D2FF"
+                       Text="{Binding DailyCashBox.Edit3UsdM}"/>
+              <TextBox Grid.Row="13" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#D1D2FF"
+                       Text="{Binding DailyCashBox.Edit3AznM}"/>
+              <TextBox Grid.Row="13" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="13" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit3BAznM}"/>
+              <TextBox Grid.Row="14" Grid.Column="1" Background="#D1D2FF" Text="{Binding DailyCashBox.EditB3Usd}"/>
+              <TextBox Grid.Row="14" Grid.Column="2" Background="#D1D2FF" Text="{Binding DailyCashBox.EditB3Azn}"/>
+              <TextBox Grid.Row="14" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="14" Grid.Column="4" Text="{Binding DailyCashBox.EditB3BAzn}"/>
+              <TextBox Grid.Row="14" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#D1D2FF"
+                       Text="{Binding DailyCashBox.EditB3UsdM}"/>
+              <TextBox Grid.Row="14" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#D1D2FF"
+                       Text="{Binding DailyCashBox.EditB3AznM}"/>
+              <TextBox Grid.Row="14" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="14" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.EditB3BAznM}"/>
+              <TextBox Grid.Row="16" Grid.Column="1" Text="{Binding DailyCashBox.Edit8Usd}"/>
+              <TextBox Grid.Row="16" Grid.Column="2" Text="{Binding DailyCashBox.Edit8Azn}"/>
+              <TextBox Grid.Row="16" Grid.Column="3" Text="{Binding DailyCashBox.Edit8BUsd}"/>
+              <TextBox Grid.Row="16" Grid.Column="4" Text="{Binding DailyCashBox.Edit8BAzn}"/>
+              <TextBox Grid.Row="16" Grid.Column="6" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit8UsdM}"/>
+              <TextBox Grid.Row="16" Grid.Column="7" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit8AznM}"/>
+              <TextBox Grid.Row="16" Grid.Column="8" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit8BUsdM}"/>
+              <TextBox Grid.Row="16" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit8BAznM}"/>
+              <TextBox Grid.Row="18" Grid.Column="1" Background="#ABABAB" Text="{Binding DailyCashBox.Edit9Usd}"/>
+              <TextBox Grid.Row="18" Grid.Column="2" Background="#ABABAB" Text="{Binding DailyCashBox.Edit9Azn}"/>
+              <TextBox Grid.Row="18" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="18" Grid.Column="4" Text="{Binding DailyCashBox.Edit9BAzn}"/>
+              <TextBox Grid.Row="18" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#ABABAB"
+                       Text="{Binding DailyCashBox.Edit9UsdM}"/>
+              <TextBox Grid.Row="18" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#ABABAB"
+                       Text="{Binding DailyCashBox.Edit9AznM}"/>
+              <TextBox Grid.Row="18" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="18" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit9BAznM}"/>
+              <TextBox Grid.Row="19" Grid.Column="1" Background="#ABABAB" Text="{Binding DailyCashBox.EditB9Usd}"/>
+              <TextBox Grid.Row="19" Grid.Column="2" Background="#ABABAB" Text="{Binding DailyCashBox.EditB9Azn}"/>
+              <TextBox Grid.Row="19" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="19" Grid.Column="4" Text="{Binding DailyCashBox.EditB9BAzn}"/>
+              <TextBox Grid.Row="19" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#ABABAB"
+                       Text="{Binding DailyCashBox.EditB9UsdM}"/>
+              <TextBox Grid.Row="19" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#ABABAB"
+                       Text="{Binding DailyCashBox.EditB9AznM}"/>
+              <TextBox Grid.Row="19" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="19" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.EditB9BAznM}"/>
+              <TextBox Grid.Row="21" Grid.Column="1" Text="{Binding DailyCashBox.Edit10Usd}"/>
+              <TextBox Grid.Row="21" Grid.Column="2" Height="24" Grid.RowSpan="2" VerticalAlignment="Top"
+                       Text="{Binding DailyCashBox.Edit10Azn}"/>
+              <TextBox Grid.Row="21" Grid.Column="3" Text="{Binding DailyCashBox.Edit10BAzn}"/>
+              <TextBox Grid.Row="21" Grid.Column="4" Text="{Binding DailyCashBox.Edit10BUsd}"/>
+              <TextBox Grid.Row="21" Grid.Column="6" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit10UsdM}"/>
+              <TextBox Grid.Row="21" Grid.Column="7" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit10AznM}"/>
+              <TextBox Grid.Row="21" Grid.Column="8" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit10BAznM}"/>
+              <TextBox Grid.Row="21" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding DailyCashBox.Edit10BUsdM}"/>
+              <TextBox Grid.Row="23" Grid.Column="1" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="2" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="4" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="6" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="7" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="9" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="25" Grid.Column="1" Background="#FFD2CF" Text="{Binding DailyCashBox.EditAllUsd}"/>
+              <TextBox Grid.Row="25" Grid.Column="2" Background="#FFD2CF" Text="{Binding DailyCashBox.EditAllAzn}"/>
+              <TextBox Grid.Row="25" Grid.Column="3" Text="" Background="#FFD2CF"/>
+              <TextBox Grid.Row="25" Grid.Column="4" Background="#FFD2CF" Text="{Binding DailyCashBox.EditAllBAzn}"/>
+              <TextBox Grid.Row="25" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#FFD2CF"
+                       Text="{Binding DailyCashBox.EditAllUsdM}"/>
+              <TextBox Grid.Row="25" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#FFD2CF"
+                       Text="{Binding DailyCashBox.EditAllAznM}"/>
+              <TextBox Grid.Row="25" Grid.Column="8" Style="{StaticResource RedForeground}" Background="#FFD2CF"
+                       Text="{Binding DailyCashBox.EditAllBUsdM}"/>
+              <TextBox Grid.Row="25" Grid.Column="9" Style="{StaticResource RedForeground}" Background="#FFD2CF"
+                       Text="{Binding DailyCashBox.EditAllBAznM}"/>
+              <Grid Row="26" ColumnSpan="10" Margin="20 10 0 10">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="1*"/>
+                  <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <FrameworkElement.Resources>
+                  <local1:ExpenseBackgroundConverter x:Key="ExpenseBackgroundConverter"/>
+                </FrameworkElement.Resources>
+                <StackPanel>
+                  <Button Content="+" FontSize="26" FontWeight="Bold" Foreground="White" Padding="6,0" Background="#6A9FB5"
+                          BorderBrush="Transparent" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                          Style="{StaticResource RoundedButtonStyle}" Command="{Binding OpenInsertExpenseView, Mode=OneWay}"/>
+                </StackPanel>
+                <DataGrid Grid.Column="1" FontWeight="Bold" AutoGenerateColumns="False" HeadersVisibility="None"
+                          IsReadOnly="True" ItemsSource="{Binding DailyExpenses}">
+                  <DataGrid.Columns>
+                    <DataGridTextColumn Width="60" Binding="{Binding DepartId}"/>
+                    <DataGridTextColumn Width="80" Binding="{Binding OperSumDollar}"/>
+                    <DataGridTextColumn Width="80" Binding="{Binding OperSumAzn}"/>
+                    <DataGridTextColumn Width="80" Binding="{Binding OperSumUsdBref}"/>
+                    <DataGridTextColumn Width="80" Binding="{Binding OperSumAznBref}"/>
+                    <DataGridTextColumn Width="330" Binding="{Binding ExpenseName}"/>
+                  </DataGrid.Columns>
+                  <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                      <Setter Property="Control.Background"
+                              Value="{Binding Converter={StaticResource ExpenseBackgroundConverter}}"/>
+                    </Style>
+                  </DataGrid.RowStyle>
+                </DataGrid>
+              </Grid>
+              <TextBox Grid.Row="27" Grid.Column="0" Text="Xərc" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="28" Grid.Column="0" Text="Qalıq" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="27" Grid.Column="1" Text="{Binding DailyCashBox.EditExpenseUsd}"/>
+              <TextBox Grid.Row="27" Grid.Column="2" Text="{Binding DailyCashBox.EditExpenseAzn}"/>
+              <TextBox Grid.Row="27" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="27" Grid.Column="4" Text="{Binding DailyCashBox.EditExpenseAznBref}"/>
+              <TextBox Grid.Row="28" Grid.Column="1" Background="#FDD3D1" Text="{Binding DailyCashBox.EditCurRemUsd}"/>
+              <TextBox Grid.Row="28" Grid.Column="2" Background="#FDD3D1" Text="{Binding DailyCashBox.EditCurRemAzn}"/>
+              <TextBox Grid.Row="28" Grid.Column="3" Background="#FDD3D1" Text="{Binding DailyCashBox.EditCurRemUsdBref}"/>
+              <TextBox Grid.Row="28" Grid.Column="4" Background="#FDD3D1" Text="{Binding DailyCashBox.EditCurRemAznBref}"/>
+              <Grid Row="27" Column="6" ColumnSpan="1">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Kos"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding DailyCashBox.EditSuit}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="27" Column="7">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Şal"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding DailyCashBox.EditPants}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="27" Column="8">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Jilet"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding DailyCashBox.EditWaistcoat}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="27" Column="9">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Plaj"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding DailyCashBox.EditRaincoat}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="28" Column="6">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Pen"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding DailyCashBox.EditJacket}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="28" Column="7">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Köy"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding DailyCashBox.EditShirt}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="28" Column="8">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Palto"/>
+                  <TextBox Width="35" Height="20" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding DailyCashBox.EditOvercoat}"/>
+                </StackPanel>
+              </Grid>
+            </Grid>
+          </Grid>
+          <GridSplitter Grid.Column="1" Width="5" HorizontalAlignment="Center" VerticalAlignment="Stretch"
+                        Background="Gray"/>
+          <Grid Column="2">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="30"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Row="0" Margin="0 -5 0 0">
+              <StackPanel Orientation="Horizontal" Margin="0">
+                <TextBox BorderThickness="0" Width="77" IsReadOnly="True" Padding="0 0 0 0" FontWeight="Medium"
+                         VerticalAlignment="Center" FontSize="16" Background="Transparent" Text="Tarix:"/>
+                <DatePicker BorderThickness="0" FontWeight="Medium" FontSize="16" VerticalAlignment="Center" Width="150"
+                            Margin="0 2 0 0" SelectedDate="{Binding PreviousDay, UpdateSourceTrigger=PropertyChanged}"/>
+              </StackPanel>
+            </Grid>
+            <Grid Row="1">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="140"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+              </Grid.ColumnDefinitions>
+              <Button x:Name="MyButton2" Grid.Row="0" Grid.Column="0" Content="Yüklə" FontSize="16"
+                      Background="#01FFFFFF" Foreground="Black" FontWeight="Black"/>
+              <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource HeaderStyle}" FontSize="16" Text="EM $"/>
+              <TextBox Grid.Row="0" Grid.Column="2" Style="{StaticResource HeaderStyle}" FontSize="16" Text="EM M"/>
+              <TextBox Grid.Row="0" Grid.Column="3" Style="{StaticResource HeaderStyle}" FontSize="16" Text="BR $"/>
+              <TextBox Grid.Row="0" Grid.Column="4" Style="{StaticResource HeaderStyle}" FontSize="16" Text="BR M"/>
+              <TextBox Grid.Row="0" Grid.Column="5" Style="{StaticResource HeaderStyle}" FontSize="16"/>
+              <TextBox Grid.Row="0" Grid.Column="6" Style="{StaticResource HeaderStyle}" FontSize="16"
+                       Foreground="#DE031D" Text="EM $"/>
+              <TextBox Grid.Row="0" Grid.Column="7" Style="{StaticResource HeaderStyle}" FontSize="16"
+                       Foreground="#DE031D" Text="EM M"/>
+              <TextBox Grid.Row="0" Grid.Column="8" Style="{StaticResource HeaderStyle}" FontSize="16"
+                       Foreground="#DE031D" Text="BR $"/>
+              <TextBox Grid.Row="0" Grid.Column="9" Style="{StaticResource HeaderStyle}" FontSize="16"
+                       Foreground="#DE031D" Text="BR M"/>
+              <TextBox Grid.Row="1" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="KASSA"/>
+              <TextBox Grid.Row="2" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="3" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="T.Ə"/>
+              <TextBox Grid.Row="4" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="EMİL"/>
+              <TextBox Grid.Row="5" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="6" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="ASİF"/>
+              <TextBox Grid.Row="7" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="8" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="FÜZ."/>
+              <TextBox Grid.Row="9" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="EMİL"/>
+              <TextBox Grid.Row="10" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="11" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="ASİF"/>
+              <TextBox Grid.Row="12" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="13" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="NİZ."/>
+              <TextBox Grid.Row="14" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="EMİL"/>
+              <TextBox Grid.Row="15" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="16" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="ASİF"/>
+              <TextBox Grid.Row="17" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text=""/>
+              <TextBox Grid.Row="18" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="H.C."/>
+              <TextBox Grid.Row="19" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="EMİL"/>
+              <TextBox Grid.Row="20" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="21" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="ASİF"/>
+              <TextBox Grid.Row="22" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="USA"/>
+              <TextBox Grid.Row="24" Grid.Column="0" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="25" Grid.Column="0" Style="{StaticResource HeaderStyle}" Text="CƏMİ"/>
+              <TextBox Grid.Row="1" Grid.Column="1" Background="#FDD3D1"
+                       Text="{Binding PreviousDayDailyCashBox.EditBefRemUsd}"/>
+              <TextBox Grid.Row="1" Grid.Column="2" Background="#FDD3D1"
+                       Text="{Binding PreviousDayDailyCashBox.EditBefRemAzn}"/>
+              <TextBox Grid.Row="1" Grid.Column="3" Background="#FDD3D1"
+                       Text="{Binding PreviousDayDailyCashBox.EditBefRemUsdBref}"/>
+              <TextBox Grid.Row="1" Grid.Column="4" Background="#FDD3D1"
+                       Text="{Binding PreviousDayDailyCashBox.EditBefRemAznBref}"/>
+              <TextBox Grid.Row="1" Grid.Column="6" Text="" Background="#FDD3D1"/>
+              <TextBox Grid.Row="1" Grid.Column="7" Text="" Background="#FDD3D1"/>
+              <TextBox Grid.Row="1" Grid.Column="8" Text="" Background="#FDD3D1"/>
+              <TextBox Grid.Row="1" Grid.Column="9" Text="" Background="#FDD3D1"/>
+              <TextBox Grid.Row="3" Grid.Column="1" Background="#F9FBD4" Text="{Binding PreviousDayDailyCashBox.Edit1Usd}"/>
+              <TextBox Grid.Row="3" Grid.Column="2" Background="#F9FBD4" Text="{Binding PreviousDayDailyCashBox.Edit1Azn}"/>
+              <TextBox Grid.Row="3" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="3" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.Edit1BAzn}"/>
+              <TextBox Grid.Row="3" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#F9FBD4"
+                       Text="{Binding PreviousDayDailyCashBox.Edit1UsdM}"/>
+              <TextBox Grid.Row="3" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#F9FBD4"
+                       Text="{Binding PreviousDayDailyCashBox.Edit1AznM}"/>
+              <TextBox Grid.Row="3" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="3" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit1BAznM}"/>
+              <TextBox Grid.Row="4" Grid.Column="1" Background="#F9FBD4"
+                       Text="{Binding PreviousDayDailyCashBox.EditB1Usd}"/>
+              <TextBox Grid.Row="4" Grid.Column="2" Background="#F9FBD4"
+                       Text="{Binding PreviousDayDailyCashBox.EditB1Azn}"/>
+              <TextBox Grid.Row="4" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="4" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.EditB1BAzn}"/>
+              <TextBox Grid.Row="4" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#F9FBD4"
+                       Text="{Binding PreviousDayDailyCashBox.EditB1UsdM}"/>
+              <TextBox Grid.Row="4" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#F9FBD4"
+                       Text="{Binding PreviousDayDailyCashBox.EditB1AznM}"/>
+              <TextBox Grid.Row="4" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="4" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.EditB1BAznM}"/>
+              <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding PreviousDayDailyCashBox.Edit5Usd}"/>
+              <TextBox Grid.Row="6" Grid.Column="2" Text="{Binding PreviousDayDailyCashBox.Edit5Azn}"/>
+              <TextBox Grid.Row="6" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="6" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.Edit5BAzn}"/>
+              <TextBox Grid.Row="6" Grid.Column="6" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit5UsdM}"/>
+              <TextBox Grid.Row="6" Grid.Column="7" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit5AznM}"/>
+              <TextBox Grid.Row="6" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="6" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit5BAznM}"/>
+              <TextBox Grid.Row="8" Grid.Column="1" Background="#D7FED5" Text="{Binding PreviousDayDailyCashBox.Edit2Usd}"/>
+              <TextBox Grid.Row="8" Grid.Column="2" Background="#D7FED5" Text="{Binding PreviousDayDailyCashBox.Edit2Azn}"/>
+              <TextBox Grid.Row="8" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="8" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.Edit2BAzn}"/>
+              <TextBox Grid.Row="8" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#D7FED5"
+                       Text="{Binding PreviousDayDailyCashBox.Edit2UsdM}"/>
+              <TextBox Grid.Row="8" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#D7FED5"
+                       Text="{Binding PreviousDayDailyCashBox.Edit2AznM}"/>
+              <TextBox Grid.Row="8" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="8" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit2BAznM}"/>
+              <TextBox Grid.Row="9" Grid.Column="1" Background="#D7FED5"
+                       Text="{Binding PreviousDayDailyCashBox.EditB2Usd}"/>
+              <TextBox Grid.Row="9" Grid.Column="2" Background="#D7FED5"
+                       Text="{Binding PreviousDayDailyCashBox.EditB2Azn}"/>
+              <TextBox Grid.Row="9" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="9" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.EditB2BAzn}"/>
+              <TextBox Grid.Row="9" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#D7FED5"
+                       Text="{Binding PreviousDayDailyCashBox.EditB2UsdM}"/>
+              <TextBox Grid.Row="9" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#D7FED5"
+                       Text="{Binding PreviousDayDailyCashBox.EditB2AznM}"/>
+              <TextBox Grid.Row="9" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="9" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.EditB2BAznM}"/>
+              <TextBox Grid.Row="11" Grid.Column="1" Text="{Binding PreviousDayDailyCashBox.Edit7Usd}"/>
+              <TextBox Grid.Row="11" Grid.Column="2" Text="{Binding PreviousDayDailyCashBox.Edit7Azn}"/>
+              <TextBox Grid.Row="11" Grid.Column="3" Text="{Binding PreviousDayDailyCashBox.Edit7BUsd}"/>
+              <TextBox Grid.Row="11" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.Edit7BAzn}"/>
+              <TextBox Grid.Row="11" Grid.Column="6" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit7UsdM}"/>
+              <TextBox Grid.Row="11" Grid.Column="7" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit7AznM}"/>
+              <TextBox Grid.Row="11" Grid.Column="8" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit7BUsdM}"/>
+              <TextBox Grid.Row="11" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit7BAznM}"/>
+              <TextBox Grid.Row="13" Grid.Column="1" Background="#D1D2FF"
+                       Text="{Binding PreviousDayDailyCashBox.Edit3Usd}"/>
+              <TextBox Grid.Row="13" Grid.Column="2" Background="#D1D2FF"
+                       Text="{Binding PreviousDayDailyCashBox.Edit3Azn}"/>
+              <TextBox Grid.Row="13" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="13" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.Edit3BAzn}"/>
+              <TextBox Grid.Row="13" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#D1D2FF"
+                       Text="{Binding PreviousDayDailyCashBox.Edit3UsdM}"/>
+              <TextBox Grid.Row="13" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#D1D2FF"
+                       Text="{Binding PreviousDayDailyCashBox.Edit3AznM}"/>
+              <TextBox Grid.Row="13" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="13" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit3BAznM}"/>
+              <TextBox Grid.Row="14" Grid.Column="1" Background="#D1D2FF"
+                       Text="{Binding PreviousDayDailyCashBox.EditB3Usd}"/>
+              <TextBox Grid.Row="14" Grid.Column="2" Background="#D1D2FF"
+                       Text="{Binding PreviousDayDailyCashBox.EditB3Azn}"/>
+              <TextBox Grid.Row="14" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="14" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.EditB3BAzn}"/>
+              <TextBox Grid.Row="14" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#D1D2FF"
+                       Text="{Binding PreviousDayDailyCashBox.EditB3UsdM}"/>
+              <TextBox Grid.Row="14" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#D1D2FF"
+                       Text="{Binding PreviousDayDailyCashBox.EditB3AznM}"/>
+              <TextBox Grid.Row="14" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="14" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.EditB3BAznM}"/>
+              <TextBox Grid.Row="16" Grid.Column="1" Text="{Binding PreviousDayDailyCashBox.Edit8Usd}"/>
+              <TextBox Grid.Row="16" Grid.Column="2" Text="{Binding PreviousDayDailyCashBox.Edit8Azn}"/>
+              <TextBox Grid.Row="16" Grid.Column="3" Text="{Binding PreviousDayDailyCashBox.Edit8BUsd}"/>
+              <TextBox Grid.Row="16" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.Edit8BAzn}"/>
+              <TextBox Grid.Row="16" Grid.Column="6" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit8UsdM}"/>
+              <TextBox Grid.Row="16" Grid.Column="7" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit8AznM}"/>
+              <TextBox Grid.Row="16" Grid.Column="8" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit8BUsdM}"/>
+              <TextBox Grid.Row="16" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit8BAznM}"/>
+              <TextBox Grid.Row="18" Grid.Column="1" Background="#ABABAB"
+                       Text="{Binding PreviousDayDailyCashBox.Edit9Usd}"/>
+              <TextBox Grid.Row="18" Grid.Column="2" Background="#ABABAB"
+                       Text="{Binding PreviousDayDailyCashBox.Edit9Azn}"/>
+              <TextBox Grid.Row="18" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="18" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.Edit9BAzn}"/>
+              <TextBox Grid.Row="18" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#ABABAB"
+                       Text="{Binding PreviousDayDailyCashBox.Edit9UsdM}"/>
+              <TextBox Grid.Row="18" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#ABABAB"
+                       Text="{Binding PreviousDayDailyCashBox.Edit9AznM}"/>
+              <TextBox Grid.Row="18" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="18" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit9BAznM}"/>
+              <TextBox Grid.Row="19" Grid.Column="1" Background="#ABABAB"
+                       Text="{Binding PreviousDayDailyCashBox.EditB9Usd}"/>
+              <TextBox Grid.Row="19" Grid.Column="2" Background="#ABABAB"
+                       Text="{Binding PreviousDayDailyCashBox.EditB9Azn}"/>
+              <TextBox Grid.Row="19" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="19" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.EditB9BAzn}"/>
+              <TextBox Grid.Row="19" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#ABABAB"
+                       Text="{Binding PreviousDayDailyCashBox.EditB9UsdM}"/>
+              <TextBox Grid.Row="19" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#ABABAB"
+                       Text="{Binding PreviousDayDailyCashBox.EditB9AznM}"/>
+              <TextBox Grid.Row="19" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="19" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.EditB9BAznM}"/>
+              <TextBox Grid.Row="21" Grid.Column="1" Text="{Binding PreviousDayDailyCashBox.Edit10Usd}"/>
+              <TextBox Grid.Row="21" Grid.Column="2" Text="{Binding PreviousDayDailyCashBox.Edit10Azn}"/>
+              <TextBox Grid.Row="21" Grid.Column="3" Text="{Binding PreviousDayDailyCashBox.Edit10BAzn}"/>
+              <TextBox Grid.Row="21" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.Edit10BUsd}"/>
+              <TextBox Grid.Row="21" Grid.Column="6" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit10UsdM}"/>
+              <TextBox Grid.Row="21" Grid.Column="7" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit10AznM}"/>
+              <TextBox Grid.Row="21" Grid.Column="8" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit10BAznM}"/>
+              <TextBox Grid.Row="21" Grid.Column="9" Style="{StaticResource RedForeground}"
+                       Text="{Binding PreviousDayDailyCashBox.Edit10BUsdM}"/>
+              <TextBox Grid.Row="23" Grid.Column="1" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="2" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="4" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="6" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="7" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="8" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="23" Grid.Column="9" Style="{StaticResource RedForeground}" Text=""/>
+              <TextBox Grid.Row="25" Grid.Column="1" Background="#FFD2CF"
+                       Text="{Binding PreviousDayDailyCashBox.EditAllUsd}"/>
+              <TextBox Grid.Row="25" Grid.Column="2" Background="#FFD2CF"
+                       Text="{Binding PreviousDayDailyCashBox.EditAllAzn}"/>
+              <TextBox Grid.Row="25" Grid.Column="3" Text="" Background="#FFD2CF"/>
+              <TextBox Grid.Row="25" Grid.Column="4" Background="#FFD2CF"
+                       Text="{Binding PreviousDayDailyCashBox.EditAllBAzn}"/>
+              <TextBox Grid.Row="25" Grid.Column="6" Style="{StaticResource RedForeground}" Background="#FFD2CF"
+                       Text="{Binding PreviousDayDailyCashBox.EditAllUsdM}"/>
+              <TextBox Grid.Row="25" Grid.Column="7" Style="{StaticResource RedForeground}" Background="#FFD2CF"
+                       Text="{Binding PreviousDayDailyCashBox.EditAllAznM}"/>
+              <TextBox Grid.Row="25" Grid.Column="8" Style="{StaticResource RedForeground}" Background="#FFD2CF"
+                       Text="{Binding PreviousDayDailyCashBox.EditAllBUsdM}"/>
+              <TextBox Grid.Row="25" Grid.Column="9" Style="{StaticResource RedForeground}" Background="#FFD2CF"
+                       Text="{Binding PreviousDayDailyCashBox.EditAllBAznM}"/>
+              <Grid Row="26" ColumnSpan="10" Margin="20 10 0 10">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="1*"/>
+                  <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <FrameworkElement.Resources>
+                  <local1:ExpenseBackgroundConverter x:Key="ExpenseBackgroundConverter"/>
+                </FrameworkElement.Resources>
+                <StackPanel>
+                  <Button Content="+" FontSize="26" FontWeight="Bold" Foreground="White" Padding="6,0" Background="#6A9FB5"
+                          BorderBrush="Transparent" Margin="0" HorizontalAlignment="Left" VerticalAlignment="Center"
+                          Style="{StaticResource RoundedButtonStyle}"
+                          Command="{Binding OpenInsertExpenseViewYesterday, Mode=OneWay}"/>
+                </StackPanel>
+                <DataGrid Grid.Column="1" FontWeight="Bold" AutoGenerateColumns="False" HeadersVisibility="None"
+                          IsReadOnly="True" ItemsSource="{Binding PreviousDayDailyExpenses}">
+                  <DataGrid.Columns>
+                    <DataGridTextColumn Width="60" Binding="{Binding DepartId}"/>
+                    <DataGridTextColumn Width="80" Binding="{Binding OperSumDollar}"/>
+                    <DataGridTextColumn Width="80" Binding="{Binding OperSumAzn}"/>
+                    <DataGridTextColumn Width="80" Binding="{Binding OperSumUsdBref}"/>
+                    <DataGridTextColumn Width="80" Binding="{Binding OperSumAznBref}"/>
+                    <DataGridTextColumn Width="330" Binding="{Binding ExpenseName}"/>
+                  </DataGrid.Columns>
+                  <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                      <Setter Property="Control.Background"
+                              Value="{Binding Converter={StaticResource ExpenseBackgroundConverter}}"/>
+                    </Style>
+                  </DataGrid.RowStyle>
+                </DataGrid>
+              </Grid>
+              <TextBox Grid.Row="27" Grid.Column="0" Text="Xərc" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="28" Grid.Column="0" Text="Qalıq" Style="{StaticResource HeaderStyle}"/>
+              <TextBox Grid.Row="27" Grid.Column="1" Text="{Binding PreviousDayDailyCashBox.EditExpenseUsd}"/>
+              <TextBox Grid.Row="27" Grid.Column="2" Text="{Binding PreviousDayDailyCashBox.EditExpenseAzn}"/>
+              <TextBox Grid.Row="27" Grid.Column="3" Text=""/>
+              <TextBox Grid.Row="27" Grid.Column="4" Text="{Binding PreviousDayDailyCashBox.EditExpenseAznBref}"/>
+              <TextBox Grid.Row="28" Grid.Column="1" Background="#FDD3D1"
+                       Text="{Binding PreviousDayDailyCashBox.EditCurRemUsd}"/>
+              <TextBox Grid.Row="28" Grid.Column="2" Background="#FDD3D1"
+                       Text="{Binding PreviousDayDailyCashBox.EditCurRemAzn}"/>
+              <TextBox Grid.Row="28" Grid.Column="3" Background="#FDD3D1"
+                       Text="{Binding PreviousDayDailyCashBox.EditCurRemUsdBref}"/>
+              <TextBox Grid.Row="28" Grid.Column="4" Background="#FDD3D1"
+                       Text="{Binding PreviousDayDailyCashBox.EditCurRemAznBref}"/>
+              <Grid Row="27" Column="6" ColumnSpan="1">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Kos"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding PreviousDayDailyCashBox.EditSuit}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="27" Column="7">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Şal"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding PreviousDayDailyCashBox.EditPants}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="27" Column="8">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Jilet"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding PreviousDayDailyCashBox.EditWaistcoat}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="27" Column="9">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Plaj"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding PreviousDayDailyCashBox.EditRaincoat}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="28" Column="6">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Pen"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding PreviousDayDailyCashBox.EditJacket}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="28" Column="7">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Köy"/>
+                  <TextBox Width="35" Height="23" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding PreviousDayDailyCashBox.EditShirt}"/>
+                </StackPanel>
+              </Grid>
+              <Grid Row="28" Column="8">
+                <StackPanel Orientation="Horizontal">
+                  <TextBox Width="35" Height="20" Style="{StaticResource HeaderStyle}" Padding="0" Text="Palto"/>
+                  <TextBox Width="35" Height="20" IsReadOnly="True" BorderThickness="1" Background="White"
+                           Text="{Binding PreviousDayDailyCashBox.EditOvercoat}"/>
+                </StackPanel>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </StackPanel>
+    </ScrollViewer>
+  </Grid>
+</UserControl>

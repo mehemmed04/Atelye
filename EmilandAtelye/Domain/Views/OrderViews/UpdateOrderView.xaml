@@ -1,0 +1,101 @@
+<Window x:Class="EmilandAtelye.Domain.Views.OrderViews.UpdateOrderView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmilandAtelye.Domain.Views.OrderViews"
+        Title="UpdateOrderView" Height="150" Width="1300" WindowStartupLocation="CenterScreen">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="100"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid Column="0">
+      <Grid Column="0">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition/>
+          <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+          <TextBlock Width="40" Text="Kodu" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left" IsReadOnly="True"
+                   Text="{Binding CustomerId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          <TextBlock Width="40" Margin="0,10" Text="Tipi" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <ComboBox Width="110" HorizontalAlignment="Left" DisplayMemberPath="GroupGen2Name" IsReadOnly="True"
+                    ItemsSource="{Binding Types, Mode=TwoWay}" SelectedItem="{Binding SelectedType, Mode=TwoWay}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+          <TextBlock Width="40" Text="Adı" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left" IsReadOnly="True"
+                   Text="{Binding CustomerName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          <TextBlock Width="50" Margin="0,10" Text="Barkod" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left" IsReadOnly="True"
+                   Text="{Binding BarCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+          <TextBlock Width="40" Text="Soyadı" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left" IsReadOnly="True"
+                   Text="{Binding CustomerSurname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          <TextBlock Width="61" Margin="0,10" Text="Qiyməti" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left" IsReadOnly="True"
+                   Text="{Binding Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+          <TextBlock Width="40" Text="Qeyd" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left" IsReadOnly="True"
+                   Text="{Binding Note, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          <TextBlock Width="89" Margin="0,10" Text="Son Qiymeti" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left"
+                   Text="{Binding LastPrice, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="4">
+          <TextBlock Width="40" Text="Mobil" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left" IsReadOnly="True"
+                   Text="{Binding CustomerGsm, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          <TextBlock Width="89" Margin="0,10" Text="Ödəniş (Beh)" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <TextBox Width="110" HorizontalAlignment="Left" IsReadOnly="True"
+                   Text="{Binding Beh, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="5">
+          <TextBlock Width="40" Text="Tel" FontWeight="Bold" FontSize="14" Grid.Column="0" HorizontalAlignment="Left"/>
+          <TextBox Width="70" HorizontalAlignment="Left" IsReadOnly="True"
+                   Text="{Binding CustomerTel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+          <StackPanel Margin="0,40,0,0" Orientation="Horizontal">
+            <TextBlock Width="40" Text="Təcili" FontWeight="Bold" FontSize="14"/>
+            <CheckBox Width="18" IsChecked="{Binding IsChecked, Mode=TwoWay}"/>
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="6">
+          <TextBlock Width="95" Text="Təhvil tarixi" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <DatePicker Margin="0,5" SelectedDate="{Binding DeliveryDate}"/>
+          <TextBlock Width="89" Text="Ölçü götürən" FontWeight="Bold" FontSize="14" Grid.Column="0"
+                     HorizontalAlignment="Left"/>
+          <ComboBox Width="110" HorizontalAlignment="Left" DisplayMemberPath="TailorShortName" IsReadOnly="True"
+                    SelectedItem="{Binding SelectedTypeForMeasurment, Mode=TwoWay}"
+                    ItemsSource="{Binding Tailors, Mode=TwoWay}"/>
+        </StackPanel>
+        <StackPanel Grid.Column="7">
+          <Button Content="Save" Grid.Row="4" Width="120" Height="60" FontSize="16" FontWeight="Bold"
+                  Foreground="White" Background="#6A9FB5" BorderBrush="Transparent" Margin="0,20,0,0"
+                  HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource RoundedButtonStyle}"
+                  Command="{Binding UpdateOrderCommand}"/>
+        </StackPanel>
+      </Grid>
+    </Grid>
+  </Grid>
+</Window>

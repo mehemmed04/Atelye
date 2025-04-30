@@ -1,0 +1,42 @@
+<Window x:Class="EmilandAtelye.Domain.Views.LoginView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmilandAtelye.Domain.Views"
+        ResizeMode="NoResize" Title="Login" Height="450" Width="400" WindowStartupLocation="CenterScreen"
+        Background="#F0F4F8">
+  <UIElement.InputBindings>
+    <KeyBinding Key="Enter" CommandParameter="{Binding ElementName=PasswordBox}"
+                Command="{Binding LoginCommand, Mode=TwoWay}"/>
+  </UIElement.InputBindings>
+  <Grid Margin="20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="2*"/>
+      <RowDefinition Height="4*"/>
+      <RowDefinition Height="4*"/>
+      <RowDefinition Height="2*"/>
+      <RowDefinition Height="2*"/>
+    </Grid.RowDefinitions>
+    <TextBlock Text="Login" FontSize="26" FontWeight="Bold" HorizontalAlignment="Center"
+               VerticalAlignment="Center" Foreground="#4A4A4A" Margin="0,10,0,0"/>
+    <StackPanel Grid.Row="1" Margin="0,10,0,0">
+      <TextBlock Text="Username" FontSize="14" Foreground="#6D6D6D"/>
+      <TextBox Name="UsernameTextBox" Height="35" Margin="0,5,0,0" Background="White" BorderBrush="#E3E5E8"
+               BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Stretch"
+               Style="{StaticResource RoundedTextBoxStyle}" Text="{Binding Username}"/>
+    </StackPanel>
+    <StackPanel Grid.Row="2" Margin="0,10,0,0">
+      <TextBlock Text="Password" FontSize="14" Foreground="#6D6D6D"/>
+      <PasswordBox Name="PasswordBox" Height="35" Margin="0,5,0,0" Background="White" BorderBrush="#E3E5E8"
+                   BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Stretch"
+                   Style="{StaticResource RoundedPasswordBoxStyle}"/>
+    </StackPanel>
+    <Button Content="Login" Grid.Row="4" Width="120" Height="60" FontSize="16" FontWeight="Bold"
+            Foreground="White" Background="#6A9FB5" BorderBrush="Transparent" Margin="0,20,0,0"
+            HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource RoundedButtonStyle}"
+            Command="{Binding LoginCommand, Mode=TwoWay}" CommandParameter="{Binding ElementName=PasswordBox}"/>
+    <TextBlock Name="ErrorMessage" Grid.Row="3" Foreground="#E57373" HorizontalAlignment="Center"
+               VerticalAlignment="Center" Visibility="Visible" FontSize="14" Text="{Binding ErrorMessage}"/>
+  </Grid>
+</Window>
